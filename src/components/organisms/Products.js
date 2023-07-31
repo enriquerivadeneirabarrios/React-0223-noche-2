@@ -20,7 +20,7 @@ const Products = () => {
 export default Products
 
 const Product = styled.div`
-background-color: White;
+background-color: white;
 
 
 `
