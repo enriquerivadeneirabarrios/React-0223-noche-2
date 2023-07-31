@@ -9,7 +9,6 @@ const Products = () => {
 
     <CardsList/>
     
-
     </Product>
 
    

@@ -61,12 +61,7 @@ const CardsList = () => {
       display: grid;
       grid-template-columns: repeat(
         auto-fit,
-        minmax(150px,1fr)
-        
-      )
-
-
-
+        minmax(150px,1fr))
       }
 
      
