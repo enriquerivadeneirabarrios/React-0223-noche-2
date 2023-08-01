@@ -1,10 +1,10 @@
 const CartItems = ({data, deleteFromCart}) => {
-    let {name, price, id, quantity} = data;
+    let {title, precio, id, quantity} = data;
 
     return (
         <div className="cart-item">
-            <h4>{name}</h4>
-            <h5>{price} x {quantity} = ${price*quantity}</h5>
+            <h4>{title}</h4>
+            <h5>{precio} x {quantity} = ${precio*quantity}</h5>
             <button onClick={() => deleteFromCart(id)}>Eliminar uno</button>
             <button onClick={() => deleteFromCart(id, true)}>Eliminar todos</button>
         </div>

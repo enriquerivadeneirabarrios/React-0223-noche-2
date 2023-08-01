@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import React from 'react'
 import Button from './Button'
 
+
 const Card = (props) => {
   return (
     <>
@@ -14,9 +15,10 @@ const Card = (props) => {
         </figcaption>
                                                 
             <Peso>1 kg.</Peso><Precio >{props.data.precio}</Precio>
-        <Button />   
+            
+        <Button Content="Agregar" OnClick = {props.OnClick} />   
         </Cards>
-         
+        
 
     </>
   )
@@ -69,7 +71,5 @@ padding: 5px 15px;
 margin-right: 2.3rem;
 margin-left: 1.3rem;
 border-radius: 5px;
-
-
 
 `

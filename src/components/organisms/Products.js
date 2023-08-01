@@ -2,12 +2,12 @@ import styled from 'styled-components'
 import React from 'react'
 import CardsList from '../molecules/CardList'
 
-const Products = () => {
+const Products = (props) => {
   return (
     <>
     <Product>
 
-    <CardsList/>
+    <CardsList Db={props.Db}OnClick={props.OnClick}/>
     
 
     </Product>

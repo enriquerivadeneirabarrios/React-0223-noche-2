@@ -1,10 +1,11 @@
 import React, { useEffect, useReducer } from 'react'
 import { TYPES } from '../../actions/shoppingActions'
-import Product from '../atoms/Product'
 import CartItems from '../atoms/CartItems'
 import {shoppingReducer} from '../../reducer/shoppingReducer'
 import {shoppingInitialState} from '../../reducer/shoppingReducer'
-import axios from 'axios'
+import Button from '../atoms/Button'
+import Products from './Products'
+// import axios from 'axios'
 
 
 const ShoppingCart = () => {
@@ -31,7 +32,7 @@ const clearCart = () => {
 
     const {products, cart} = state;
 
-const updateState = async() => {
+/*const updateState = async() => {
     const productsURL = "http://localhost:3004/products";
     const cartURL = "http://locahost:3004/cart";
     const resProducts = await axios.get(productsURL);
@@ -44,25 +45,29 @@ const updateState = async() => {
 
 useEffect ( () =>{
     updateState()
-}, [])
+}, [])*/
 
     return (
     <>
-      <h2>Carrito De Compras</h2>
-        <h3>Productos</h3>
+
+      <h3>Productos</h3>
+      <Products Db={products} OnClick={addToCart}/>
+      {/*
         <div className = "grid">
           {products.map((product) =>(
             <Product key={product.id} data={product} addToCart={addToCart}/>
           ))}         
         </div>
+          */}
 
-      <h3>Carrito</h3>
-      <div className="box">
+<h2>Carrito De Compras</h2>
+        <div className="box">
         {cart.map((item, i) =>(
           <CartItems key={i} data={item} deleteFromCart={deleteFromCart} />
         ))}
       </div>
-      <button onClick = {clearCart}>Limpiar carrito</button>
+     {/* <button onClick = {clearCart}>Limpiar carrito</button> */}
+      <Button Content = "Limpiar carrito" onclick = {clearCart} />
     </>
   );
 };

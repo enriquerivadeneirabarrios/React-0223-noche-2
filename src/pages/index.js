@@ -26,13 +26,12 @@ export default function Home() {
        
       </main>
       <section>
-        <Products/>
+      
         <ShoppingCart />              
       </section>
       <footer>
        
       </footer>
-    <ShoppingCart />
     </>
   )
 }

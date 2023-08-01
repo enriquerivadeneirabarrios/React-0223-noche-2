@@ -2,7 +2,7 @@
 import React from 'react'
 import Card from '../atoms/Card'
 
-const Db = [
+const Db =  [
   {
     id: 1,
     img: "https://img.freepik.com/fotos-premium/aguacate-aislado-blanco_62856-4854.jpg",
@@ -39,13 +39,15 @@ const Db = [
   },
 ]
 
-const CardsList = () => {
+
+const CardsList = (props) => {
   return (
     <section>
       {
         Db.map(card => <Card
           key={card.id}
           data={card}
+          OnClick={props.OnClick}
         />)
       }
 
