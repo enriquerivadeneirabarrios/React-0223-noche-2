@@ -1,34 +1,31 @@
 import { TYPES } from "../actions/ShoppingActions";
-import { Db } from "../components/molecules/CardList"
-
-
 
 export const shoppingInitialState = {       //el estado inicial es la base de datos de productos, en un objeto, y el carrito en otro objeto vacio
     products : [
         {
-          id: 1,
+          id: 1 ,
           img: "https://img.freepik.com/fotos-premium/aguacate-aislado-blanco_62856-4854.jpg",
           title: "Palta",
-          precio: "$2.590",
+          precio: 2590,
         },
         {
           id: 2,
           img: "https://cdnx.jumpseller.com/newen-verde1/image/33398731/resize/1280/1280?1679678128",
           title: "Tomate",
-          precio: "$679",
+          precio: 679,
         },
         {
           id: 3,
           img: "https://www.novaplaza.com.pe/wp-content/uploads/2023/02/Mesa-de-trabajo-2-11.jpg",
           title: "Uva",
-          precio: "$663",
+          precio: 663,
       
         },
         {
           id: 4,
           img: "https://mlcvkocrfpoo.i.optimole.com/w:1200/h:1200/q:mauto/rt:fill/g:ce/el:1/f:avif/https://www.ecooperativas.com/wp-content/uploads/2021/02/naranja-de-campo.jpg",
           title: "Naranja",
-          precio: "$700",
+          precio: 700,
           
       
         },
@@ -36,7 +33,7 @@ export const shoppingInitialState = {       //el estado inicial es la base de da
           id: 5,
           img: "https://tofuu.getjusto.com/orioneat-prod/jvkzb3y6tvAJcf7Dq-H-Oregano-Albahaca.png",
           title: "Pan",
-          precio: "$450",
+          precio: 450,
       
         },
       ],
@@ -56,7 +53,7 @@ export function shoppingReducer (state , action) {
         case TYPES.ADD_TO_CART : {
             let newItem = state.products.find( (product) => product.id === action.payload);
 
-            let itemInCart = state.cart.find ( (item) => item.id ===newItem.id);        //era state.cart, no state.product OJO
+            let itemInCart = state.cart.find ( (item) => item.id === newItem.id);        //era state.cart, no state.product OJO
             console.log(newItem);
             
             return itemInCart

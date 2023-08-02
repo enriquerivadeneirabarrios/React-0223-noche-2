@@ -7,7 +7,7 @@ const Products = (props) => {
     <>
     <Product>
 
-    <CardsList Db={props.Db}OnClick={props.OnClick}/>
+    <CardsList OnClick={props.OnClick}/>
     
 
     </Product>

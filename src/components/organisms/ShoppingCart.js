@@ -1,11 +1,11 @@
 import React, { useEffect, useReducer } from 'react'
 import { TYPES } from '../../actions/shoppingActions'
-import CartItems from '../atoms/CartItems'
+import CartItems from '../molecules/CartItems'
 import {shoppingReducer} from '../../reducer/shoppingReducer'
 import {shoppingInitialState} from '../../reducer/shoppingReducer'
 import Button from '../atoms/Button'
-import Products from './Products'
-// import axios from 'axios'
+import Card from '../atoms/Card'
+import styled from 'styled-components'
 
 
 const ShoppingCart = () => {
@@ -32,33 +32,16 @@ const clearCart = () => {
 
     const {products, cart} = state;
 
-/*const updateState = async() => {
-    const productsURL = "http://localhost:3004/products";
-    const cartURL = "http://locahost:3004/cart";
-    const resProducts = await axios.get(productsURL);
-    const resCart = await axios.get(cartURL);
-    const newProduct = await resProducts.data;
-    const newCartItem = await resCart.data;
-
-    dispatch ({type: TYPES.READ_STATE , payload: [newProduct , newCartItem]})
-}
-
-useEffect ( () =>{
-    updateState()
-}, [])*/
 
     return (
     <>
 
       <h3>Productos</h3>
-      <Products Db={products} OnClick={addToCart}/>
-      {/*
-        <div className = "grid">
-          {products.map((product) =>(
-            <Product key={product.id} data={product} addToCart={addToCart}/>
-          ))}         
-        </div>
-          */}
+      <Product>
+        {products.map((product) =>(
+          <Card data={product} addToCart={addToCart} />
+        ))}         
+      </Product>
 
 <h2>Carrito De Compras</h2>
         <div className="box">
@@ -66,10 +49,27 @@ useEffect ( () =>{
           <CartItems key={i} data={item} deleteFromCart={deleteFromCart} />
         ))}
       </div>
-     {/* <button onClick = {clearCart}>Limpiar carrito</button> */}
-      <Button Content = "Limpiar carrito" onclick = {clearCart} />
+      <Button Content = "Limpiar carrito" OnClick = {clearCart} />
     </>
   );
 };
 
 export default ShoppingCart;
+
+const Product = styled.div`
+display: flex;
+justify-content:center;
+justify-content:space-around;
+padding-left: 50px;
+padding-top: 50px;
+padding-bottom: 50px;
+background-color: white;
+display: grid;
+grid-template-columns: repeat(
+  auto-fit,
+  minmax(150px,1fr)
+  
+)
+
+
+`

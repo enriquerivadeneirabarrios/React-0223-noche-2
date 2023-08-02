@@ -5,6 +5,7 @@ import Button from './Button'
 
 
 const Card = (props) => {
+ // const {img,title,precio,id} = data
   return (
     <>
 
@@ -16,7 +17,7 @@ const Card = (props) => {
                                                 
             <Peso>1 kg.</Peso><Precio >{props.data.precio}</Precio>
             
-        <Button Content="Agregar" OnClick = {props.OnClick} />   
+        <Button Content="Agregar" OnClick = {() => props.addToCart(props.data.id)} />   
         </Cards>
         
 
