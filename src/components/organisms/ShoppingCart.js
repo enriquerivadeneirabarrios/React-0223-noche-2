@@ -1,7 +1,7 @@
 import React, { useEffect, useReducer } from 'react'
-import { TYPES } from '../../actions/shoppingActions'
+import { TYPES } from '../../actions/ShoppingActions.js'
 import CartItems from '../molecules/CartItems'
-import {shoppingReducer} from '../../reducer/shoppingReducer'
+import {shoppingReducer} from '../../reducer/ShoppingReducer'
 import {shoppingInitialState} from '../../reducer/shoppingReducer'
 import Button from '../atoms/Button'
 import Card from '../atoms/Card'
@@ -44,17 +44,27 @@ const clearCart = () => {
       </Product>
 
 <h2>Carrito De Compras</h2>
-        <div className="box">
+        <div>
         {cart.map((item, i) =>(
           <CartItems key={i} data={item} deleteFromCart={deleteFromCart} />
         ))}
       </div>
+      <div>
       <Button Content = "Limpiar carrito" OnClick = {clearCart} />
+      <Button Content = "Ir a pagar" />
+      </div>
+      <div>
+        <h3>Subtotal</h3>
+        <p>${} </p>
+      </div>
+      
     </>
   );
 };
 
 export default ShoppingCart;
+
+
 
 const Product = styled.div`
 display: flex;

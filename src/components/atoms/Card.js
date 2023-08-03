@@ -15,7 +15,7 @@ const Card = (props) => {
             <Producto>{props.data.title}</Producto>
         </figcaption>
                                                 
-            <Peso>1 kg.</Peso><Precio >{props.data.precio}</Precio>
+            <Peso>1 kg.</Peso><Precio >${props.data.precio}</Precio>
             
         <Button Content="Agregar" OnClick = {() => props.addToCart(props.data.id)} />   
         </Cards>

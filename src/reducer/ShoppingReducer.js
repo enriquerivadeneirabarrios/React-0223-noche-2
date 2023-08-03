@@ -39,6 +39,8 @@ export const shoppingInitialState = {       //el estado inicial es la base de da
       ],
 
     cart: [ ],
+
+    cartPrice: [ ],
 }
 
 export function shoppingReducer (state , action) {
@@ -51,23 +53,26 @@ export function shoppingReducer (state , action) {
             }
         }
         case TYPES.ADD_TO_CART : {
-            let newItem = state.products.find( (product) => product.id === action.payload);
+            let newItem = state.products.find( (product) => product.id === action.payload); //newItem es igual a comparar si en la lista de productos hay alguno que coincida con el id del boton apretado
 
-            let itemInCart = state.cart.find ( (item) => item.id === newItem.id);        //era state.cart, no state.product OJO
+            let itemInCart = state.cart.find ( (item) => item.id === newItem.id);        //itemInCart es igual a comparar si el id de los productos del carrito coincide con newItem
             console.log(newItem);
+            console.log(itemInCart);
             
-            return itemInCart
-            ? {
+            return itemInCart       
+            ? {                                     //si el find encuentra algo, hace esto
                 ...state,
-                cart: state.cart.map((item) =>
+                cart: state.cart.map((item) =>      //va a mapear todos los elementos del carrito, pero va a comparar si el id del elemento coincide con el de newItem
                     item.id === newItem.id
-                    ? { ...item , quantity: item.quantity + 1}
-                    : item
+                    ? { ...item , quantity: item.quantity + 1, subtotal: item.precio * (item.quantity + 1) }  //si coincide, mapea el item y suma uno a quantity
+                    : item                                      //si no coinicde, mapea item sin cambios
                     ),
+                //cartPrice: PROGRAMAR ESTO!!!!!!!!!!!
                 }
-            :{
+            :{                                     //si el find no encuentra nada, hace esto
                 ...state,       //guardar una copia del estado
-                cart : [...state.cart , {...newItem, quantity: 1}],
+                cart : [...state.cart , {...newItem, quantity: 1 , subtotal: newItem.precio }],
+                //cartPrice: [...state.cartPrice, {}]
             
         }; 
         
@@ -79,7 +84,7 @@ export function shoppingReducer (state , action) {
             ? {
                 ...state,
                 cart: state.cart.map((item) => item.id === action.payload
-                ? { ...item, quantity: item.quantity - 1}
+                ? { ...item, quantity: item.quantity - 1, subtotal: item.precio * (item.quantity - 1)}
                 : item
                 ),
             }
