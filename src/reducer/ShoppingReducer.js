@@ -40,9 +40,34 @@ export const shoppingInitialState = {       //el estado inicial es la base de da
 
     cart: [ ],
 
-    subtotals: [ ],
+    /*subtotals: [
+        {
+            id : 1 ,
+            sub: 0 ,
+        },
 
-    cartPrice: [],
+        {
+            id : 2 ,
+            sub: 0 ,
+        },
+
+        {
+            id : 3 ,
+            sub: 0,
+        },
+
+        {
+            id : 4 ,
+            sub: 0,
+        },
+
+        {
+            id : 5 ,
+            sub: 0,
+        },
+     ],*/
+
+    cartPrice: null,
 }
 
 export function shoppingReducer (state , action) {
@@ -58,6 +83,8 @@ export function shoppingReducer (state , action) {
             let newItem = state.products.find( (product) => product.id === action.payload); //newItem es igual a comparar si en la lista de productos hay alguno que coincida con el id del boton apretado
 
             let itemInCart = state.cart.find ( (item) => item.id === newItem.id);        //itemInCart es igual a comparar si el id de los productos del carrito coincide con newItem
+           // let subtotalInCart = state.subtotals.find((item) => item.id === itemInCart.id);
+            
             console.log(newItem);
             console.log(itemInCart);
             
@@ -69,12 +96,12 @@ export function shoppingReducer (state , action) {
                     ? { ...item , quantity: item.quantity + 1, subtotal: item.precio * (item.quantity + 1) }  //si coincide, mapea el item y suma uno a quantity
                     : item                                      //si no coinicde, mapea item sin cambios
                     ),
-               // subtotals: 
+              //subtotals: 
                 }
             :{                                     //si el find no encuentra nada, hace esto
                 ...state,       //guardar una copia del estado
                 cart : [...state.cart , {...newItem, quantity: 1 , subtotal: newItem.precio }],
-                //subtotals: [...state.subtotals,]
+                
             
         }; 
         
