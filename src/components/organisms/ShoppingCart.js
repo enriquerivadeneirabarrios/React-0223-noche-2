@@ -30,7 +30,7 @@ const clearCart = () => {
   dispatch({type: TYPES.CLEAR_CART});
 };
 
-    const {products, cart} = state;
+    const {products, cart, subtotals, cartPrice} = state;
 
 
     return (
@@ -55,7 +55,7 @@ const clearCart = () => {
       </div>
       <div>
         <h3>Subtotal</h3>
-        <p>${} </p>
+        <p>${subtotals} </p>
       </div>
       
     </>

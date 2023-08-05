@@ -40,7 +40,9 @@ export const shoppingInitialState = {       //el estado inicial es la base de da
 
     cart: [ ],
 
-    cartPrice: [ ],
+    subtotals: [ ],
+
+    cartPrice: [],
 }
 
 export function shoppingReducer (state , action) {
@@ -67,12 +69,12 @@ export function shoppingReducer (state , action) {
                     ? { ...item , quantity: item.quantity + 1, subtotal: item.precio * (item.quantity + 1) }  //si coincide, mapea el item y suma uno a quantity
                     : item                                      //si no coinicde, mapea item sin cambios
                     ),
-                //cartPrice: PROGRAMAR ESTO!!!!!!!!!!!
+               // subtotals: 
                 }
             :{                                     //si el find no encuentra nada, hace esto
                 ...state,       //guardar una copia del estado
                 cart : [...state.cart , {...newItem, quantity: 1 , subtotal: newItem.precio }],
-                //cartPrice: [...state.cartPrice, {}]
+                //subtotals: [...state.subtotals,]
             
         }; 
         
