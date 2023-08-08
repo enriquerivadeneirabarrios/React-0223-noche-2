@@ -16,7 +16,7 @@
     transparent 360deg
   );
   --secondary-glow: radial-gradient(
-    rgba(255, 255, 255, 1),
+    rgb(255, 255, 255),
     rgba(255, 255, 255, 0)
   );
 
@@ -103,8 +103,67 @@ a {
   html {
     color-scheme: dark;
   }
+
+.reviews-slide{
+  width: 280px;
+  background-color:  rgba(173, 227, 115);
+  border-radius: 5px;
+  border: 0px;
+  box-shadow: 3px 3px 7px;
+  display: inline-flex;
+  flex-direction: column;
+  margin-top: -45px;
+  margin-left: 20px;
+}  
 }
 
+.review-person{
+  height: 75px;
+}
 
+.name{
+  margin-top: 30px;
+}
 
+img{
+width: 95px;
+height: 30px;
+object-fit: cover;
+}
 
+.Ana{
+  width: 100px;
+  height: 100px;
+  background-color:  #ade373;
+  border-radius: 55%;
+  margin-right: 180px;
+  margin-top: 5px;
+  position: relative;
+}
+.Leo{
+  width: 100px;
+  height: 100px;
+  background-color:  rgba(173, 227, 115);
+  border-radius: 55%;
+  margin-right: 10px;
+  margin-top: 5px;
+  position: relative;
+}
+.Lucia{
+  width: 100px;
+  height: 100px;
+  background-color:  rgba(173, 227, 115);
+  border-radius: 55%;
+  margin-left: 190px;
+  margin-top: 5px;
+  position: relative;
+}
+.Angel{
+  width: 100px;
+  height: 100px;
+  background-color:  rgba(173, 227, 115);
+  border-radius: 55%;
+  margin-left: 200px;
+  margin-top: 5px;
+  position: relative;
+}

@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import Products from '@/components/organisms/Products'
+import Comments from '@/components/organisms/Comments'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,6 +18,7 @@ export default function Home() {
         <link rel="preconnect" href="https://fonts.googleapis.com"/>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
         <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200&display=swap" rel="stylesheet"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com"></link>
       </Head>
       <header>
   
@@ -28,6 +30,11 @@ export default function Home() {
         <Products/>
               
       </section>
+      
+      <section>
+      <Comments/>
+      </section>
+
       <footer>
        
       </footer>
