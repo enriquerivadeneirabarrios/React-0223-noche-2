@@ -1,6 +1,6 @@
 import { TYPES } from "../actions/ShoppingActions";
 
-export const shoppingInitialState = {       //el estado inicial es la base de datos de productos, en un objeto, y el carrito en otro objeto vacio
+export const shoppingInitialState = {      
     products : [
         {
           id: 1 ,
@@ -40,34 +40,9 @@ export const shoppingInitialState = {       //el estado inicial es la base de da
 
     cart: [ ],
 
-    /*subtotals: [
-        {
-            id : 1 ,
-            sub: 0 ,
-        },
+    subtotals: [ ],
 
-        {
-            id : 2 ,
-            sub: 0 ,
-        },
 
-        {
-            id : 3 ,
-            sub: 0,
-        },
-
-        {
-            id : 4 ,
-            sub: 0,
-        },
-
-        {
-            id : 5 ,
-            sub: 0,
-        },
-     ],*/
-
-    cartPrice: null,
 }
 
 export function shoppingReducer (state , action) {
@@ -86,7 +61,7 @@ export function shoppingReducer (state , action) {
            // let subtotalInCart = state.subtotals.find((item) => item.id === itemInCart.id);
             
             console.log(newItem);
-            console.log(itemInCart);
+            console.log(shoppingInitialState.subtotals);
             
             return itemInCart       
             ? {                                     //si el find encuentra algo, hace esto
@@ -96,16 +71,19 @@ export function shoppingReducer (state , action) {
                     ? { ...item , quantity: item.quantity + 1, subtotal: item.precio * (item.quantity + 1) }  //si coincide, mapea el item y suma uno a quantity
                     : item                                      //si no coinicde, mapea item sin cambios
                     ),
-              //subtotals: 
+                subtotals: state.subtotals.push((newItem.precio))
                 }
             :{                                     //si el find no encuentra nada, hace esto
                 ...state,       //guardar una copia del estado
                 cart : [...state.cart , {...newItem, quantity: 1 , subtotal: newItem.precio }],
-                
+                subtotals: [newItem.precio]
+                    
+                    
+                }
             
         }; 
         
-    }
+    
         case TYPES.REMOVE_ONE_PRODUCT: {
             let itemToDelete = state.cart.find((item) => item.id === action.payload) ;
 
