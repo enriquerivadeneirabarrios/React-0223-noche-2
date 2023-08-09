@@ -108,23 +108,14 @@ a {
 /****************CAROUSEL*****************/
 
 .sliders {
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
   width: 60%;
-  margin: 0% 20%;
+  margin: 20px 20%;
 }
 
 .sliders-item {
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
   width: 100%;
 }
 img {
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
   width: 100%;
 }
 

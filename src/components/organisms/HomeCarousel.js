@@ -4,7 +4,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Carousel from 'react-bootstrap/Carousel';
 import carousel1 from '../../../public/images-carousel/carousel1.jpg';
 import carousel2 from '../../../public/images-carousel/carousel2.jpg';
-import carousel3 from '../../../public/images-carousel/carousel3.jpg'; 
+import carousel3 from '../../../public/images-carousel/carousel3.jpg';
+import carousel4 from '../../../public/images-carousel/carousel4.jpg'; 
 
 
 const Banner = () => {
@@ -14,22 +15,29 @@ const Banner = () => {
             <Carousel.Item className="sliders-item">
                 <img
                     className="sliders-img"
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfnCoRxF8p1rTc58Q5ZcjAYvlfmWhbNQ_Nvh2EkeKeoK-q4c93WBfzYWWy7yXBfyePtw&usqp=CAU"
+                    src= "./images-carousel/carousel1.jpg"
                     alt="First slide"
                 />
             </Carousel.Item>
             <Carousel.Item className="sliders-item">
                 <img
                     className="sliders-img"
-                    src="https://www.cotodigital3.com.ar/sitios/cdigi/static/content/images/cdigi/ofertas/cartridge/nuevahome/2022-07/images/colgate040622.jpg"
+                    src= "./images-carousel/carousel2.jpg"
                     alt="Second slide"
                 />
             </Carousel.Item>
             <Carousel.Item className="sliders-item"> 
                 <img
                     className="sliders-img"
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShzFM19clxbsjtYle6Fa7w0r3Q19Xzaqtdd33HMCBTg9TN0KWqpGqnrmxK1Srm3cT_vQ&usqp=CAU"
+                    src= "./images-carousel/carousel3.jpg"
                     alt="Third slide"
+                />
+            </Carousel.Item>
+            <Carousel.Item className="sliders-item">
+                <img
+                    className="sliders-img"
+                    src= "./images-carousel/carousel4.jpg"
+                    alt="Fourth slide"
                 />
             </Carousel.Item>
         </Carousel>
