@@ -73,7 +73,7 @@ export function shoppingReducer (state , action) {
                     ? { ...item , quantity: item.quantity + 1, subtotal: item.precio * (item.quantity + 1) }  //si coincide, mapea el item y suma uno a quantity
                     : item                                      //si no coinicde, mapea item sin cambios
                     ),
-                cartPrice: state.cartPrice + newItem.precio
+                cartPrice: state.cartPrice + newItem.precio //actualiza el precio del carrito. es igual en ambos casos
                 }
             :{                                     //si el find no encuentra nada, hace esto
                 ...state,       //guardar una copia del estado
@@ -95,7 +95,7 @@ export function shoppingReducer (state , action) {
                 ? { ...item, quantity: item.quantity - 1, subtotal: item.precio * (item.quantity - 1)}
                 : item
                 ),
-                cartPrice: state.cartPrice - itemToDelete.precio
+                cartPrice: state.cartPrice - itemToDelete.precio    //actualiza el precio del carrito. es igual en ambos casos porque solo elimina un producto
             }
             : {
                 ...state,
@@ -104,10 +104,10 @@ export function shoppingReducer (state , action) {
             };
         }
         case TYPES.REMOVE_ALL_PRODUCTS : {
-            let itemToRemove = state.cart.find((item)=>item.id===action.payload);
+            let itemToRemove = state.cart.find((item)=>item.id===action.payload);   //hay que inventar esta variable para poder eliminar el valor del carrito
             return {
                 ...state,
-                cartPrice: state.cartPrice - (itemToRemove.precio * itemToRemove.quantity),
+                cartPrice: state.cartPrice - (itemToRemove.precio * itemToRemove.quantity), //hay que restar el precio del carrito antes de eliminar los productos
                 cart: state.cart.filter(item => item.id !== action.payload)
 
             }
