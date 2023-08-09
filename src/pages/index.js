@@ -25,8 +25,7 @@ export default function Home() {
       <main >
        
       </main>
-      <section>
-      
+      <section>      
         <ShoppingCart />              
       </section>
       <footer>

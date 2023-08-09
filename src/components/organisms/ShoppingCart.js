@@ -38,28 +38,28 @@ const clearCart = () => {
 
     return (
     <>
+      <h2>Carrito De Compras</h2>
+        <Carrito>
+          <div>
+            {cart.map((item, i) =>(
+              <CartItems key={i} data={item} deleteFromCart={deleteFromCart} />
+            ))}
+            <Button Content = "Limpiar carrito" OnClick = {clearCart} />
+          </div>
 
-      <h3>Productos</h3>
+          <div>
+            <h3>Subtotal</h3>
+            <p>$ {cartPrice} </p>
+            <Button Content = "Ir a pagar" />
+            </div>
+        </Carrito>
+
+        <h3>Productos</h3>
       <Product>
         {products.map((product) =>(
           <Card data={product} addToCart={addToCart} />
         ))}         
       </Product>
-
-<h2>Carrito De Compras</h2>
-        <div>
-        {cart.map((item, i) =>(
-          <CartItems key={i} data={item} deleteFromCart={deleteFromCart} />
-        ))}
-      </div>
-      <div>
-      <Button Content = "Limpiar carrito" OnClick = {clearCart} />
-       </div>
-      <div>
-        <h3>Subtotal</h3>
-        <p>$ {cartPrice} </p>
-        <Button Content = "Ir a pagar" />
-      </div>
       
     </>
   );
@@ -70,9 +70,7 @@ export default ShoppingCart;
 
 
 const Product = styled.div`
-display: flex;
-justify-content:center;
-justify-content:space-around;
+
 padding-left: 50px;
 padding-top: 50px;
 padding-bottom: 50px;
@@ -80,9 +78,17 @@ background-color: white;
 display: grid;
 grid-template-columns: repeat(
   auto-fit,
-  minmax(150px,1fr)
-  
+  minmax(150px,1fr)  
 )
+`
+
+const Carrito = styled.div`
+display:grid;
+grid-template-columns: repeat(
+  auto-fit,
+  minmax(150px,1fr)
+)
+padding:50px;
 
 
 `
