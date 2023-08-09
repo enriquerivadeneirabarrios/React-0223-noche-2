@@ -8,12 +8,6 @@ import Card from '../atoms/Card'
 import styled from 'styled-components'
 
 
-function cartSum (total,num) {
-  return total + cart[num].subtotal
-}
-
-function cartPrice () { 
-  return cart.reduce(cartSum,0)}
 
 const ShoppingCart = () => {
     const [state,dispatch] = useReducer (shoppingReducer, shoppingInitialState);
@@ -37,7 +31,7 @@ const clearCart = () => {
   dispatch({type: TYPES.CLEAR_CART});
 };
 
-    const {products, cart,subtotals} = state;
+    const {products, cart,cartPrice} = state;
 
     
 
@@ -60,11 +54,11 @@ const clearCart = () => {
       </div>
       <div>
       <Button Content = "Limpiar carrito" OnClick = {clearCart} />
-      <Button Content = "Ir a pagar" />
-      </div>
+       </div>
       <div>
         <h3>Subtotal</h3>
-        <p>$ {subtotals} </p>
+        <p>$ {cartPrice} </p>
+        <Button Content = "Ir a pagar" />
       </div>
       
     </>

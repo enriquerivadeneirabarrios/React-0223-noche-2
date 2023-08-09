@@ -40,18 +40,19 @@ export const shoppingInitialState = {
 
     cart: [ ],
 
-    subtotals: [ ],
-
+    cartPrice : 0 ,
 
 }
 
 export function shoppingReducer (state , action) {
     switch (action.type) {
+
         case TYPES.READ_STATE : {
             return {
                 ...state,
-                Db: action.payload[0],
-                cart: action.payload[1]
+                products: action.payload[0],
+                cart: action.payload[1],
+                cartPrice: action.payload[1]
             }
         }
         case TYPES.ADD_TO_CART : {
@@ -59,9 +60,10 @@ export function shoppingReducer (state , action) {
 
             let itemInCart = state.cart.find ( (item) => item.id === newItem.id);        //itemInCart es igual a comparar si el id de los productos del carrito coincide con newItem
            // let subtotalInCart = state.subtotals.find((item) => item.id === itemInCart.id);
-            
+
             console.log(newItem);
-            console.log(shoppingInitialState.subtotals);
+            console.log(shoppingInitialState.cartPrice);
+
             
             return itemInCart       
             ? {                                     //si el find encuentra algo, hace esto
@@ -71,15 +73,14 @@ export function shoppingReducer (state , action) {
                     ? { ...item , quantity: item.quantity + 1, subtotal: item.precio * (item.quantity + 1) }  //si coincide, mapea el item y suma uno a quantity
                     : item                                      //si no coinicde, mapea item sin cambios
                     ),
-                subtotals: state.subtotals.push((newItem.precio))
+                cartPrice: state.cartPrice + newItem.precio
                 }
             :{                                     //si el find no encuentra nada, hace esto
                 ...state,       //guardar una copia del estado
-                cart : [...state.cart , {...newItem, quantity: 1 , subtotal: newItem.precio }],
-                subtotals: [newItem.precio]
-                    
-                    
+                cart : [...state.cart , {...newItem, quantity: 1 , subtotal: newItem.precio }],                    
+                cartPrice: state.cartPrice + newItem.precio
                 }
+                              
             
         }; 
         
@@ -94,16 +95,21 @@ export function shoppingReducer (state , action) {
                 ? { ...item, quantity: item.quantity - 1, subtotal: item.precio * (item.quantity - 1)}
                 : item
                 ),
+                cartPrice: state.cartPrice - itemToDelete.precio
             }
             : {
                 ...state,
-                cart: state.cart.filter(item => item.id !== action.payload)
+                cart: state.cart.filter(item => item.id !== action.payload),
+                cartPrice: state.cartPrice - itemToDelete.precio
             };
         }
         case TYPES.REMOVE_ALL_PRODUCTS : {
+            let itemToRemove = state.cart.find((item)=>item.id===action.payload);
             return {
                 ...state,
+                cartPrice: state.cartPrice - (itemToRemove.precio * itemToRemove.quantity),
                 cart: state.cart.filter(item => item.id !== action.payload)
+
             }
         }
         case TYPES.CLEAR_CART : {
