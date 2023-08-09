@@ -29,7 +29,8 @@ export default function Home() {
       </main>
       <section>
         <HomeCarousel/>
-        
+      </section>
+      <section>
         <Products/>
               
       </section>
