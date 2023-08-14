@@ -177,17 +177,19 @@ object-fit: cover;
 /****************CAROUSEL*****************/
 
 .sliders {
-  width: 60%;
-  margin: 20px 20%;
+  width: 100%;
+  height: 30%;
+  margin: 20px 0px;
 }
 
 .sliders-item {
   width: 100%;
-
+  height: 30%;
 }
 .sliders-img {
   width: 100%;
   height: 100%;
+
 }
 /*******************Footer***************/
 footer {
