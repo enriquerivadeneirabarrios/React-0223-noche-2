@@ -167,3 +167,19 @@ object-fit: cover;
   margin-top: 5px;
   position: relative;
 }
+
+/****************CAROUSEL*****************/
+
+.sliders {
+  width: 60%;
+  margin: 20px 20%;
+}
+
+.sliders-item {
+  width: 100%;
+
+}
+.sliders-img {
+  width: 100%;
+  height: 100%;
+}
