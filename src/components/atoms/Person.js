@@ -107,8 +107,8 @@ export const Person = () => {
 
 
 const Persons = styled.figure`
-margin-top: 10px;
+margin-top: 25px;
 color: black;
-font-size: 16px;
+font-size: 14px;
 font-family: "Outfit",sans-serif;
 `

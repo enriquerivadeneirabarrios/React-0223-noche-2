@@ -119,6 +119,7 @@ a {
 }  
 }
 
+/****************COMMENTS*****************/
 .review-person{
   height: 75px;
 }
@@ -131,6 +132,11 @@ img{
 width: 95px;
 height: 30px;
 object-fit: cover;
+}
+
+.descripcion-review{
+  font-size: 16px;
+  color: #3c4446;
 }
 
 .Ana{
