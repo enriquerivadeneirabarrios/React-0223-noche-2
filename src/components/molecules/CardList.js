@@ -56,7 +56,7 @@ const CardsList = () => {
       justify-content:center;
       justify-content:space-around;
       padding-left: 50px;
-      padding-top: 50px;
+      padding-top: 80px;
       padding-bottom: 50px;
       background-color: white;
       display: grid;

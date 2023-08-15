@@ -26,7 +26,7 @@ export default Card
 
 const Cards = styled.figure`
 width: 200px;
-height: 350px;
+height: 380px;
 border-radius: 5px;
 background-color: white;
 border: 1px solid transparent;
