@@ -7,7 +7,7 @@ const Card = (props) => {
   return (
     <>
 
-        <Cards className={styles.figure}>
+        <Cards >
         <Image src= {props.data.img} alt=""/>
         <figcaption>
             <Producto>{props.data.title}</Producto>
