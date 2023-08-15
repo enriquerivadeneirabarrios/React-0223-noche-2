@@ -31,9 +31,6 @@ border-radius: 5px;
 background-color: white;
 border: 1px solid transparent;
 
-
-
-
 `
 
 

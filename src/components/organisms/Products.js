@@ -21,6 +21,7 @@ export default Products
 
 const Product = styled.div`
 background-color: white;
+width: 100%;
 height: 100vh;
 
 `
