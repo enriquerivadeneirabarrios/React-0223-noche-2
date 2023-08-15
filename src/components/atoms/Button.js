@@ -24,7 +24,8 @@ const Button = () => {
 
     button:hover {
         background-color:  rgba(173, 227, 115, 0.6);
-    }
+       
+    } 
 
     
     `}</style>

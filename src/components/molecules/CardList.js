@@ -51,6 +51,7 @@ const CardsList = () => {
 
       <style jsx> {`
     section {
+      font-family: 'Outfit', sans-serif;
       display: flex;
       justify-content:center;
       justify-content:space-around;
@@ -61,11 +62,7 @@ const CardsList = () => {
       display: grid;
       grid-template-columns: repeat(
         auto-fit,
-        minmax(150px,1fr)
-        
-      )
-
-
+        minmax(150px,1fr))
 
       }
 
