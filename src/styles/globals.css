@@ -81,6 +81,8 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+
+  
   
 }
 
@@ -139,6 +141,7 @@ object-fit: cover;
   margin-right: 180px;
   margin-top: 5px;
   position: relative;
+
 }
 .Leo{
   width: 100px;
@@ -148,6 +151,7 @@ object-fit: cover;
   margin-right: 10px;
   margin-top: 5px;
   position: relative;
+ 
 }
 .Lucia{
   width: 100px;
@@ -157,6 +161,7 @@ object-fit: cover;
   margin-left: 190px;
   margin-top: 5px;
   position: relative;
+  
 }
 .Angel{
   width: 100px;
@@ -166,20 +171,62 @@ object-fit: cover;
   margin-left: 200px;
   margin-top: 5px;
   position: relative;
+  
 }
 
 /****************CAROUSEL*****************/
 
 .sliders {
-  width: 60%;
-  margin: 20px 20%;
+  width: 100%;
+  height: 30%;
+  margin: 20px 0px;
 }
 
 .sliders-item {
   width: 100%;
-
+  height: 30%;
 }
 .sliders-img {
   width: 100%;
   height: 100%;
+
+}
+/*******************Footer***************/
+footer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin-top: auto;
+  
+ 
+}
+#section_footer {
+  width: 100%;
+  background:  #76b631;
+  block-size: auto;
+  color: #fff;
+
+  text-decoration: none;
+  margin-top: auto;
+  
+}
+#section_footer:hover {
+  text-decoration: underline;
+  color: #519607;
+}
+
+.a, span {
+  color: #fff;
+  font-size: .75em;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #ffffff;
+}
+
+p {
+  color: #fff;
+  font-size:.7em;
 }

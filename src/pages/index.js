@@ -6,6 +6,7 @@ import HomeCarousel from '@/components/organisms/HomeCarousel'
 import Products from '@/components/organisms/Products';
 import Comments from '@/components/organisms/Comments'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Footer from '../components/molecules/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -35,13 +36,12 @@ export default function Home() {
         <Products/>
               
       </section>
-      
       <section>
-      <Comments/>
+        <Comments/>
       </section>
 
       <footer>
-       
+        <Footer/>
       </footer>
     </>
   )
