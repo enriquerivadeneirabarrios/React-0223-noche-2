@@ -15,7 +15,7 @@ const AboutUs = () => {
                 <p>Desde el año 1982 brindándoles el mejor servicio
     y por ustedes estamos en todo América para nuestros clientes.
     Hoy para tu mayor comodidad te presentamos nuestra página para 
-    facilitarte así tus compras. Lo que compres te lo enviamos de tu casa para tu mayor comodidad y disfrute. Para nuestros clientes muy amables por habernos escogido a nosotros, muy amables por nuestro crecimiento </p>
+    facilitarte así tus compras Lo que compres te lo enviamos de tu casa para tu mayor comodidad y disfrute. Para nuestros clientes muy amables por habernos escogido a nosotros, muy amables por nuestro crecimiento </p>
 
               </Paragraph>
               <Button> Read more
