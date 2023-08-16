@@ -8,6 +8,7 @@ import Products from '@/components/organisms/Products';
 import Comments from '@/components/organisms/Comments'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from '@/components/molecules/Footer'
+import ShoppingCart from '@/components/organisms/ShoppingCart'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -36,6 +37,7 @@ export default function Home() {
       </section>
       <section>
         <Products/>
+        <ShoppingCart />
               
       </section>
       <section>
