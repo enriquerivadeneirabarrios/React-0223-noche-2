@@ -10,6 +10,7 @@ import styled from 'styled-components'
 
 
 
+
 const ShoppingCart = () => {
     const [state,dispatch] = useReducer (shoppingReducer, shoppingInitialState);
 
@@ -55,7 +56,7 @@ const clearCart = () => {
 
           <Sub>
             <SubText><b>Subtotal</b><br />$ {cartPrice}</SubText>
-            <Button Content = "Ir a pagar" />
+            <Button OnClick  Content = "Ir a pagar" />
             </Sub>
         </Carrito>
 
@@ -95,11 +96,12 @@ padding-left: 5vw;
 padding-top: 10px;
 padding-bottom: 50px;
 background-color: white;
+
 display:grid;
 grid-template-columns: repeat(auto-fit,minmax(150px,1vh));
 grid-template-rows:repeat(auto-fit,minmax(10vh,auto));
 grid gap: 2px;
-height: 100vh;
+height: 120vh;
 width: 30vw;
 
 @media (max-width:768px){
