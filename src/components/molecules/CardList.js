@@ -1,8 +1,8 @@
 
 import React from 'react'
 import Card from '../atoms/Card'
-import {shoppingInitialState} from '../../reducer/shoppingReducer'
 
+import { shoppingInitialState } from '@/reducer/shoppingReducer'
 
 
 const CardsList = ({data,addToCart})=> {

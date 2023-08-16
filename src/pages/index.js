@@ -31,10 +31,9 @@ export default function Home() {
 
       </main>
 
-      <section>
+      <section>      
         <Banner/>
       </section>
-      
       <section>
         <Products/>
               
