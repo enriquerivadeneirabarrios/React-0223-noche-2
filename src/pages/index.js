@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
+import Navbar from '@/components/organisms/Navbar'
 import HomeCarousel from '@/components/organisms/HomeCarousel'
 import Products from '@/components/organisms/Products';
 import Comments from '@/components/organisms/Comments'

@@ -9,15 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
-<<<<<<< HEAD
-    "axios": "^1.4.0",
-=======
     "@fortawesome/fontawesome-free": "^6.4.2",
     "@fortawesome/fontawesome-svg-core": "^6.4.2",
     "@fortawesome/free-regular-svg-icons": "^6.4.2",
     "@fortawesome/free-solid-svg-icons": "^6.4.2",
     "bootstrap": "^5.3.1",
->>>>>>> 314d1af2303734131624ad9577332395048c0f0b
     "eslint": "8.45.0",
     "eslint-config-next": "13.4.12",
     "json-server": "^0.17.3",
