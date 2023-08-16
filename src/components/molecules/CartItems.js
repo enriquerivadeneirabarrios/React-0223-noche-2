@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 import React from 'react'
+import Button from '../atoms/Button';
+import ButtonRed from '../atoms/ButtonRed';
 
 
 const CartItems = ({data, deleteFromCart}) => {
@@ -8,11 +10,11 @@ const CartItems = ({data, deleteFromCart}) => {
 
     return (
         <Cards>
-            <Name>{title}</Name>
             <Image src= {img} alt=""/>
-            <Price>{precio} x {quantity} = $ {subtotal} </Price>
-            <button onClick={() => deleteFromCart(id)}>Eliminar uno</button>
-            <button onClick={() => deleteFromCart(id, true)}>Eliminar todos</button>
+            <Name><b>{title}</b> <br />{precio} x {quantity} = $ {subtotal} </Name>
+            <ButtonRed OnClick={() => deleteFromCart(id)} Content = "Eliminar uno" />
+            <ButtonRed OnClick={() => deleteFromCart(id, true)} Content = "Eliminar todos" />
+
         </Cards>
     );
 
@@ -22,29 +24,44 @@ export default CartItems;
 
 const Cards = styled.figure`
 display:grid;
-grid-template-columns(3,minmax(150px,auto));
-grid-rows:1;
-width: 200px;
-height: 100px;
+grid-template-columns: repeat(auto-fit,minmax(5vw,10vw));
+grid-template-rows: 40px, 30px 30px;
+grid-gap: 10px;
+
+
+
 border-radius: 5px;
 background-color: white;
 border: 1px solid transparent;
 
+margin-top:;
+margin-left:10px;
+
+@media(max-width:768px){
+    grid-template-columns:minmax(5vw,10vw);
+}
+
 `
 
 const Image = styled.img`
-width: 100%;
-height: 80%;
-object-fit:cover;
-grid-column:1;
+
+width: 150px;
+height: 70px;
+object-fit: contain;
+border: 1px solid transparent;
+
 
 `
 
-const Name = styled.h4`
-grid-column: 2/3;
+const Name = styled.p`
+
+align-self:center;
+padding-bottom: 25px;
+
 `
 
 const Price = styled.p`
-grid-column:2/3;
+grid-column:2;
+grid-row
 line-height:50%
 `

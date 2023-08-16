@@ -46,16 +46,15 @@ const clearCart = () => {
             {cart.map((item, i) =>(
               <CartItems key={i} data={item} deleteFromCart={deleteFromCart} />
             ))}
-
           </CartCards>
+
           <CartCards>
           <Button Content = "Limpiar carrito" OnClick = {clearCart} />
           </CartCards>
 
 
           <Sub>
-            <h3>Subtotal</h3>
-            <p>$ {cartPrice} </p>
+            <SubText><b>Subtotal</b><br />$ {cartPrice}</SubText>
             <Button Content = "Ir a pagar" />
             </Sub>
         </Carrito>
@@ -92,27 +91,32 @@ grid-template-columns: repeat(
 `
 
 const Carrito = styled.div`
-padding-left: 50px;
-padding-top: 50px;
+padding-left: 5vw;
+padding-top: 10px;
 padding-bottom: 50px;
 background-color: white;
 display:grid;
-grid-template-columns: repeat(auto-fit,minmax(150px,1fr) );
-grid-auto-rows:minmax(10px, auto);
+grid-template-columns: repeat(auto-fit,minmax(150px,1vh));
+grid-template-rows:repeat(auto-fit,minmax(10vh,auto));
 grid gap: 2px;
 height: 100vh;
 width: 30vw;
 
+@media (max-width:768px){
+  grid-template-columns:minmax(150px,1vh);
+  height:200vh;
+}
 
 `
 
 const CartCards = styled.figure`
 grid-column:1/4;
-width: 80%;
-height: minmax(350px,auto);
+width: 25vw;
+
 border-radius: 5px;
 background-color: white;
-border: 1px solid black;
+border: 1px solid transparent;
+
 
 `
 
@@ -122,5 +126,13 @@ grid-row:1;
 `
 
 const Sub = styled.div`
+grid-template-columns: 100%;
+grid-template-columns: repeat(3,1fr);
 
+justify-self:start;
+
+`
+const SubText = styled.p`
+margin-left:20px;
+font-size: 1.5rem;
 `
