@@ -3,7 +3,9 @@ import styled from 'styled-components'
 import React from 'react'
 import Button from './Button'
 
+
 const Card = (props) => {
+ // const {img,title,precio,id} = data
   return (
     <>
 
@@ -13,10 +15,11 @@ const Card = (props) => {
             <Producto>{props.data.title}</Producto>
         </figcaption>
                                                 
-            <Peso>1 kg.</Peso><Precio >{props.data.precio}</Precio>
-        <Button />   
+            <Peso>1 kg.</Peso><Precio >${props.data.precio}</Precio>
+            
+        <Button Content="Agregar" OnClick = {() => props.addToCart(props.data.id)} />   
         </Cards>
-         
+        
 
     </>
   )
@@ -30,9 +33,6 @@ height: 380px;
 border-radius: 5px;
 background-color: white;
 border: 1px solid transparent;
-
-
-
 
 `
 
