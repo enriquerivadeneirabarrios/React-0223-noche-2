@@ -2,9 +2,11 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
-import ShoppingCart from '@/components/organisms/ShoppingCart'
-import Products from '@/components/organisms/Products'
-import Navbar from '@/components/organisms/Navbar'
+import HomeCarousel from '@/components/organisms/HomeCarousel'
+import Products from '@/components/organisms/Products';
+import Comments from '@/components/organisms/Comments'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Footer from '@/components/molecules/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,19 +21,27 @@ export default function Home() {
         <link rel="preconnect" href="https://fonts.googleapis.com"/>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
         <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200&display=swap" rel="stylesheet"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com"></link>
       </Head>
       <header>
         <Navbar />
      </header>
       <main >
-       
+
       </main>
       <section>
-      
-        <ShoppingCart />              
+        <HomeCarousel/>
       </section>
+      <section>
+        <Products/>
+              
+      </section>
+      <section>
+        <Comments/>
+      </section>
+
       <footer>
-       
+        <Footer/>
       </footer>
     </>
   )

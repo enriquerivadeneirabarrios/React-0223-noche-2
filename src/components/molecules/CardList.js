@@ -19,21 +19,18 @@ const CardsList = ({data,addToCart})=> {
 
       <style jsx> {`
     section {
+      font-family: 'Outfit', sans-serif;
       display: flex;
       justify-content:center;
       justify-content:space-around;
       padding-left: 50px;
-      padding-top: 50px;
+      padding-top: 80px;
       padding-bottom: 50px;
       background-color: white;
       display: grid;
       grid-template-columns: repeat(
         auto-fit,
-        minmax(150px,1fr)
-        
-      )
-
-
+        minmax(150px,1fr))
 
       }
 

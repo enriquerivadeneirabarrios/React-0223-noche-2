@@ -15,7 +15,7 @@ const Button = (props) => {
         border: 0;
         transition: 0.3s;
         margin-top: 10px;
-        margin-left: 20px;
+        margin-left: 30px;
         font-weight: bold;
         font-family: 'Outfit', sans-serif;
         
@@ -24,7 +24,8 @@ const Button = (props) => {
 
     button:hover {
         background-color:  rgba(173, 227, 115, 0.6);
-    }
+       
+    } 
 
     
     `}</style>
