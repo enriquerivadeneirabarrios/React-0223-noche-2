@@ -59,12 +59,9 @@ const CardsList = () => {
       padding-top: 80px;
       padding-bottom: 50px;
       background-color: white;
-      display: grid;
-      grid-template-columns: repeat(
-        auto-fit,
-        minmax(150px,1fr))
-
-      }
+      flex-wrap:wrap;
+      flex-grow:1;
+      flex-basis: 20 rem;
 
      
     `}
