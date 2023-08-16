@@ -3,11 +3,12 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import Navbar from '@/components/organisms/Navbar'
-import HomeCarousel from '@/components/organisms/HomeCarousel'
+import Banner from '@/components/organisms/Banner'
 import Products from '@/components/organisms/Products';
 import Comments from '@/components/organisms/Comments'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from '@/components/molecules/Footer'
+import ShoppingCart from '@/components/organisms/ShoppingCart'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -30,11 +31,13 @@ export default function Home() {
       <main >
 
       </main>
-      <section>
-        <HomeCarousel/>
+
+      <section>      
+        <Banner/>
       </section>
       <section>
         <Products/>
+        <ShoppingCart />
               
       </section>
       <section>

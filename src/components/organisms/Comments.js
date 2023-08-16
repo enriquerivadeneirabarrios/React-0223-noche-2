@@ -6,7 +6,7 @@ const Comments = () => {
   return (
     <Comment>
       <div>
-        <h2 class="section-title">¿Qué dicen nuestros clientes?</h2>
+        <h2 className="section-title">¿Qué dicen nuestros clientes?</h2>
       </div>
       <Person>
       
@@ -19,7 +19,7 @@ export default Comments
 
 const Comment = styled.div`
 background-color: white;
-height: 480px;
+height: 500px;
 font-size: 24px;
 font-style: normal;
 text-align: center;
