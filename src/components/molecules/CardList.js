@@ -31,6 +31,7 @@ const CardsList = ({data,addToCart})=> {
       flex-grow:1;
       flex-basis: 20 rem;
 
+      
      
     `}
 
