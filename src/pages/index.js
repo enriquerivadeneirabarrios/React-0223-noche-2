@@ -2,10 +2,11 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
-import HomeCarousel from '@/components/organisms/HomeCarousel'
+import HomeCarousel from '@/components/organisms/Banner'
 import Products from '@/components/organisms/Products';
 import Comments from '@/components/organisms/Comments'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Banner from '@/components/organisms/Banner'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -28,9 +29,11 @@ export default function Home() {
       <main >
 
       </main>
+
       <section>
-        <HomeCarousel/>
+        <Banner/>
       </section>
+      
       <section>
         <Products/>
               
