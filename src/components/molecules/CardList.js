@@ -4,7 +4,7 @@ import Card from '../atoms/Card'
 import {shoppingInitialState} from '../../reducer/shoppingReducer'
 
 
-
+const {data, addToCart} = state;
 const CardsList = ({data,addToCart})=> {
 
   return (
