@@ -4,7 +4,7 @@ import Card from '../atoms/Card'
 import {shoppingInitialState} from '../../reducer/shoppingReducer'
 
 
-const {data, addToCart} = state;
+
 const CardsList = ({data,addToCart})=> {
 
   return (
@@ -31,7 +31,7 @@ const CardsList = ({data,addToCart})=> {
       flex-grow:1;
       flex-basis: 20 rem;
 
-      
+    }
      
     `}
 
