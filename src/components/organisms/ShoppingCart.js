@@ -2,14 +2,14 @@ import React, { useEffect, useReducer, useId } from 'react'
 
 import { TYPES } from '../../actions/ShoppingActions.js'
 import CartItems from '../molecules/CartItems'
-import {shoppingReducer} from '../../reducer/ShoppingReducer'
+import {shoppingReducer} from '../../reducer/shoppingReducer'
 import {shoppingInitialState} from '../../reducer/shoppingReducer'
 import Button from '../atoms/Button'
 import Card from '../atoms/Card'
 import styled from 'styled-components'
 
 
-function CartIcon () {
+/*function CartIcon () {
   return (
     <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' strokeWidth='1' stroke='currentColor' fill='none' strokeLinecap='round' strokeLinejoin='round'>
       <path stroke='none' d='M0 0h24v24H0z' fill='none' />
@@ -19,9 +19,9 @@ function CartIcon () {
       <path d='M6 5l14 1l-1 7h-13' />
     </svg>
   )
-}
+}*/
 
-const cartCheckboxId = 15;
+//const cartCheckboxId = 15;
 
 
 
@@ -56,10 +56,10 @@ const clearCart = () => {
 
     return (
     <>
-          <label className='cart-button' htmlFor={cartCheckboxId}>
+      {/*}    <label className='cart-button' htmlFor={cartCheckboxId}>
         <CartIcon />
       </label>
-      <input id={cartCheckboxId} type='checkbox' hidden />
+    <input id={cartCheckboxId} type='checkbox' hidden />*/}
 
          <Carrito className="cart">
         <Title>Carrito De Compras</Title>
