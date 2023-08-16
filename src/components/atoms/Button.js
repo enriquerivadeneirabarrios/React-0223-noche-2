@@ -1,10 +1,10 @@
 
 import React from 'react'
 
-const Button = () => {
+const Button = (props) => {
   return (
     <>
-    <button>Agregar</button>
+    <button onClick = {props.OnClick}>{props.Content}</button>
     <style jsx>{`
     button {
         color: rgb(3, 84, 77);
