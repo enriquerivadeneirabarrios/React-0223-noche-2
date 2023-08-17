@@ -37,21 +37,21 @@ export default function Home() {
         <Banner/>
       </section>
 
-      <section>
+      <section id="productos">
         <Products/>
         <ShoppingCart />
               
       </section>
 
-      <section>
+      <section id="about">
         <About/>
       </section>
 
-      <section>
+      <section id="comentarios">
         <Comments/>
       </section>
 
-      <footer>
+      <footer id="contacto">
         <Footer/>
       </footer>
     </>
