@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Link from 'next/link';
-
+import styled from 'styled-components'
 
 class Footer extends Component {
   render() {
@@ -20,7 +20,7 @@ class Footer extends Component {
             <Link href="https://campus.academianumen.com/" target="_blank" className='btn btn-link'>
                 Contact
             </Link>
-            <p>Copyright © {current_year}, ACADEMIA NUMEN. All Rights Reserved.</p>
+            <Paragraph>Copyright © {current_year}, ACADEMIA NUMEN. All Rights Reserved.</Paragraph>
             </div>
       </div>
     );
@@ -28,3 +28,10 @@ class Footer extends Component {
 }
 
 export default Footer;
+
+
+const Paragraph = styled.p`
+color: #fff;
+font-size:.7em;
+`
+
