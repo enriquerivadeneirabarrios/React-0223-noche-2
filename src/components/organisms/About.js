@@ -38,10 +38,12 @@ const About = styled.div`
 width: 100%;
 min-height: 100vh;
 background-color: white;
-display: flex;
-flex-wrap:wrap;
-flex-grow:1;
-flex-basis: 20 rem;
+margin-bottom:50px;
+
+display: grid;
+grid-template-columns: repeat(
+  auto-fit,
+  minmax(150px,1fr))
 
 `
 
@@ -60,6 +62,7 @@ width: 55%;
 const Image = styled.picture`
 float:right;
 width: 40%;
+
 
 `
 

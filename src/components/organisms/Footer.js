@@ -6,7 +6,7 @@ class Footer extends Component {
   render() {
     const current_year = new Date().getFullYear();
     return (
-        <div id="section_footer">
+        <Container>
             
             <div className='text-center py-4'>
             <Link href="https://campus.academianumen.com/" target="_blank" className='btn btn-link'>
@@ -22,7 +22,7 @@ class Footer extends Component {
             </Link>
             <Paragraph>Copyright © {current_year}, ACADEMIA NUMEN. All Rights Reserved.</Paragraph>
             </div>
-      </div>
+      </Container>
     );
   }
 }
@@ -30,8 +30,39 @@ class Footer extends Component {
 export default Footer;
 
 
+
+const Container = styled.div`
+display: flex;
+flex-direction: column;
+height: 20vh;
+margin-top: auto;
+
+width: 100%;
+background:  #76b631;
+block-size: auto;
+color: #fff;
+text-decoration: none;
+margin-top: auto;
+
+
+hover {
+  text-decoration: underline;
+  color: #519607;}
+`
+
 const Paragraph = styled.p`
 color: #fff;
-font-size:.7em;
+color: #fff;
+font-size: .7rem;
+text-decoration: none;
 `
+
+
+
+
+
+
+
+
+
 
