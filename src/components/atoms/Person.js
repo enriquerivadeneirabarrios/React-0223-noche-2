@@ -111,8 +111,8 @@ font-size: 14px;
 font-family: "Outfit",sans-serif;
 `
 const Image = styled.img`
-  width: 95px;
-  height: 30px;
-  object-fit: cover;
+width: 95px;
+height: 30px;
+object-fit: cover;
   
 `
