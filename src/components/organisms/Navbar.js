@@ -28,7 +28,7 @@ function BasicExample() {
               <NavDropdown.Item href="#action/3.2">About Us</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action/3.3">
-               Redes Sociales
+               Contactanos
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
