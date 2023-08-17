@@ -45,7 +45,7 @@ const Container = styled.div`
 width: 80%;
 display: block;
 margin:auto;
-padding-top: 100px
+padding-top: 50px
 
 `
 const Box = styled.div`
