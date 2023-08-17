@@ -12,10 +12,8 @@ const AboutUs = () => {
                 <h1>About Us</h1>
               </Title>
               <Paragraph> 
-                <p>Desde el año 1982 brindándoles el mejor servicio
-    y por ustedes estamos en todo América para nuestros clientes.
-    Hoy para tu mayor comodidad te presentamos nuestra página para 
-    facilitarte así tus compras. Lo que compres te lo enviamos de tu casa para tu mayor comodidad y disfrute. Para nuestros clientes muy amables por habernos escogido a nosotros, muy amables por nuestro crecimiento </p>
+                <p>Desde el año 1982 brindándote el mejor servicio y por ustedes estamos en todo América. Hoy para tu mayor comodidad te presentamos nuestra página para 
+    facilitarte así tus compras. Lo que compres te lo enviamos a tu hogar para tu mayor comodidad y disfrute. Muy amables por habernos escogido a nosotros, gracias a ti seguimos creciendo. </p>
 
               </Paragraph>
               <Button> Read more
@@ -79,11 +77,13 @@ line-height: 1.5;
 const Button = styled.button`
 background-color: rgb(247, 148, 0);
 border: 1px solid transparent;
-padding: 10px 35px;
+padding: 10px 50px;
 color: rgb(195, 77, 25);
-font-size: 25px;
+font-size: 1rem;
 letter-spaxing: 1.5px;
 margin-top:30px;
 border-radius: 5px;
+font-weight: bold;
+font-family: 'Outfit', sans-serif;
 
-:hover: background-color: red;`
+:hover: background-color: red;`
