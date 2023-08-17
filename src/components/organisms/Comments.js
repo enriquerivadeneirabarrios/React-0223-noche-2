@@ -19,7 +19,7 @@ export default Comments
 
 const Comment = styled.div`
 background-color: white;
-height: 500px;
+height: 100px;
 font-size: 24px;
 font-style: normal;
 text-align: center;
