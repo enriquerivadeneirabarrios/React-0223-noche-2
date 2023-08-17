@@ -25,7 +25,7 @@ function BarraNavegacion() {
             <Nav.Link href="#comentarios">Comentarios</Nav.Link>
             
             <NavDropdown title="Mas" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#contacto">Contactanos</NavDropdown.Item>
+              <NavDropdown.Item href="#contacto">Contáctanos</NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
