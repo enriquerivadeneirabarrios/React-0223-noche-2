@@ -38,6 +38,10 @@ const About = styled.div`
 width: 100%;
 min-height: 100vh;
 background-color: white;
+display: flex;
+flex-wrap:wrap;
+flex-grow:1;
+flex-basis: 20 rem;
 
 `
 
@@ -45,7 +49,7 @@ const Container = styled.div`
 width: 80%;
 display: block;
 margin:auto;
-padding-top: 50px
+
 
 `
 const Box = styled.div`
