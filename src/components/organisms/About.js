@@ -12,8 +12,10 @@ const AboutUs = () => {
                 <h1>About Us</h1>
               </Title>
               <Paragraph> 
-                <p>Desde el año 1982 brindándote el mejor servicio y por ustedes estamos en todo América. Hoy para tu mayor comodidad te presentamos nuestra página para 
-    facilitarte así tus compras. Lo que compres te lo enviamos a tu hogar para tu mayor comodidad y disfrute. Muy amables por habernos escogido a nosotros, gracias a ti seguimos creciendo. </p>
+                <p>Desde el año 1982 brindándote el mejor servicio y por ustedes estamos en todo América. 
+                  Hoy para tu mayor comodidad te presentamos nuestra página para facilitarte así tus compras. 
+                  Lo que compres te lo enviamos a tu hogar para tu mayor comodidad y disfrute.
+                  Muy amables por habernos escogido a nosotros, gracias a ti seguimos creciendo. </p>
 
               </Paragraph>
               <Button> Read more
@@ -42,8 +44,8 @@ margin-bottom:50px;
 
 display: grid;
 grid-template-columns: repeat(
-  auto-fit,
-  minmax(150px,1fr))
+auto-fit,
+minmax(150px,1fr))
 
 `
 
@@ -93,4 +95,6 @@ border-radius: 5px;
 font-weight: bold;
 font-family: 'Outfit', sans-serif;
 
-:hover: background-color: red;`
+:hover: background-color: red;
+
+`

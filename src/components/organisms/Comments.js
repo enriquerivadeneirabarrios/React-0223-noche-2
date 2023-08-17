@@ -19,11 +19,12 @@ export default Comments
 
 const Comment = styled.div`
 background-color: white;
-height: 100vh;
+height: 100px;
 font-size: 24px;
 font-style: normal;
 text-align: center;
 color: #36783d;
 font-family: 'Outfit', sans-serif;
 font-weight: bold;
+
 `
