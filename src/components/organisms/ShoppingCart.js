@@ -191,8 +191,14 @@ display: flex;
 flex-wrap:wrap;
 flex-grow:1;
 flex-basis: 20 rem;
+font-family: 'Outfit', sans-serif;
+justify-content:center;
+justify-content:space-around;
+   
+    
 
-)
+
+
 `
 
 const Carrito = styled.div`

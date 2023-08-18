@@ -234,5 +234,6 @@
   box-shadow: 2px 2px 10px black; 
 }
 
-
+.button:hover { 
+  background-color: rgba(247, 148, 0, 0.6)}
 

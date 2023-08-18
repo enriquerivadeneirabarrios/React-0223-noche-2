@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-
+import styles from '@/styles/Home.module.css'
 
 const AboutUs = () => {
   return (
@@ -18,7 +18,7 @@ const AboutUs = () => {
                   Muy amables por habernos escogido a nosotros, gracias a ti seguimos creciendo. </p>
 
               </Paragraph>
-              <Button> Leer más
+              <Button className={styles.button}> Leer más
               
               </Button>
 
@@ -96,7 +96,5 @@ font-weight: bold;
 font-family: 'Outfit', sans-serif;
 
 
-:hover { 
-  background-color: rgba(247, 148, 0, 0.6)}
 
 `
