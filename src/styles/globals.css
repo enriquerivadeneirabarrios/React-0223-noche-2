@@ -201,13 +201,45 @@ a {
   height: 85vh;
 
 }
+
 /*******************Footer***************/
 footer {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
- 
+  margin-top: auto;
+
+
+}
+#section_footer {
+  width: 100%;
+  background:  #76b631;
+  block-size: auto;
+  color: #fff;
+
+  text-decoration: none;
+  margin-top: auto;
+
+}
+#section_footer:hover {
+  text-decoration: underline;
+  color: #519607;
 }
 
+.a, span {
+  color: #fff;
+  font-size: .75em;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #ffffff;
+}
+
+p {
+  color: #fff;
+  font-size:.7em;
+}
 
 
