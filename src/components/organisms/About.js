@@ -95,6 +95,8 @@ border-radius: 5px;
 font-weight: bold;
 font-family: 'Outfit', sans-serif;
 
-:hover: background-color: red;
+
+:hover { 
+  background-color: rgba(247, 148, 0, 0.6)}
 
 `

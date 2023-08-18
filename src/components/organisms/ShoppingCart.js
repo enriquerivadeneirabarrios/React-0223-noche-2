@@ -112,7 +112,7 @@ const clearCart = () => {
         </aside>
 
      
-        <h3>Productos</h3>
+      
       <Product>
         {products.map((product) =>(
           <Card data={product} addToCart={addToCart} />
@@ -187,10 +187,11 @@ padding-left: 50px;
 padding-top: 50px;
 padding-bottom: 50px;
 background-color: white;
-display: grid;
-grid-template-columns: repeat(
-  auto-fit,
-  minmax(150px,1fr)  
+display: flex;
+flex-wrap:wrap;
+flex-grow:1;
+flex-basis: 20 rem;
+
 )
 `
 
