@@ -18,7 +18,7 @@ const AboutUs = () => {
                   Muy amables por habernos escogido a nosotros, gracias a ti seguimos creciendo. </p>
 
               </Paragraph>
-              <Button> Read more
+              <Button> Leer más
               
               </Button>
 
