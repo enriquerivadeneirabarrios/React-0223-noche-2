@@ -1,4 +1,4 @@
-import React, { useEffect, useReducer, useId } from 'react'
+import React, { useEffect, useReducer, useId, useState } from 'react'
 
 import { TYPES } from '../../actions/ShoppingActions.js'
 import CartItems from '../molecules/CartItems'
@@ -7,9 +7,12 @@ import {shoppingInitialState} from '../../reducer/shoppingReducer'
 import Button from '../atoms/Button'
 import Card from '../atoms/Card'
 import styled from 'styled-components'
+import { Modal ,ModalHeader, ModalBody, ModalFooter } from 'reactstrap'
+import ButtonRed from '../atoms/ButtonRed.js'
 
 
-/*function CartIcon () {
+
+function CartIcon () {
   return (
     <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' strokeWidth='1' stroke='currentColor' fill='none' strokeLinecap='round' strokeLinejoin='round'>
       <path stroke='none' d='M0 0h24v24H0z' fill='none' />
@@ -19,12 +22,7 @@ import styled from 'styled-components'
       <path d='M6 5l14 1l-1 7h-13' />
     </svg>
   )
-}*/
-
-//const cartCheckboxId = 15;
-
-
-
+}
 
 
 const ShoppingCart = () => {
@@ -51,18 +49,37 @@ const clearCart = () => {
 
     const {products, cart,cartPrice} = state;
 
-    
+    const [mostrarCarrito, setMostrarCarrito,] = useState(false);
+    const [modal, setModal] = useState(false);
+
+      const handleCheckboxChange = () => {
+        setMostrarCarrito(!mostrarCarrito);
+      };
+
+      //const toggle = () => setModal(!modal);
+      const handleConfirmarPago = () => {
+      const confirmacion = window.confirm('¿Estás seguro de confirmar el pago?');
+      if (confirmacion) {
+        // Aquí puedes realizar la acción de confirmación de pago
+        // Por ejemplo, enviar una solicitud al servidor, actualizar el estado, etc.
+      }
+    };
 
 
     return (
     <>
-      {/*}    <label className='cart-button' htmlFor={cartCheckboxId}>
-        <CartIcon />
-      </label>
-    <input id={cartCheckboxId} type='checkbox' hidden />*/}
 
-         <Carrito className="cart">
+      <label className='cart-button'>
+        <CartIcon />
+        <input type="checkbox" onChange={handleCheckboxChange} hidden/>
+        Mostrar carrito
+      </label>
+
+
+         <aside className="cart"  style={{ display: mostrarCarrito ? 'block' : 'none' }}>
         <Title>Carrito De Compras</Title>
+       
+
           <CartCards>
             {cart.map((item, i) =>(
               <CartItems key={i} data={item} deleteFromCart={deleteFromCart} />
@@ -76,13 +93,25 @@ const clearCart = () => {
 
           <Sub>
             <SubText><b>Subtotal</b><br />$ {cartPrice}</SubText>
-            <Button OnClick  Content = "Ir a pagar" />
-            </Sub>
-        </Carrito>
+            <Button OnClick={handleConfirmarPago} Content = "Ir a pagar" />
+            {/*<Button OnClick={toggle}  Content = "Ir a pagar" />
 
+            <Modal isOpen={modal} toggle={toggle} fullscreen='md' size='=' centered={true} scrollable={true} >
+                <ModalHeader toggle={toggle}>Confirmación de pago</ModalHeader>
+                <ModalBody>
+                 ¿Está seguro de realizar la compra?
+                </ModalBody>
+                <ModalFooter>
+                  <Button  OnClick={toggle} Content='Do Something' /> {' '}
+                    
+                  <ButtonRed OnClick={toggle} Content='Cancel' />
 
-       
+                </ModalFooter>
+            </Modal>*/}
+          </Sub>
+        </aside>
 
+     
         <h3>Productos</h3>
       <Product>
         {products.map((product) =>(
@@ -92,7 +121,28 @@ const clearCart = () => {
 
       <style jsx>{`
       .cart {
-        display:none
+        display:grid;
+        position: absolute;
+        right:0px;
+        top: 0px;
+
+
+        padding-left: 5vw;
+        padding-top: 10px;
+        padding-bottom: 50px;
+        background-color: white;
+
+
+        grid-template-columns: repeat(auto-fit,minmax(150px,1vh));
+        grid-template-rows:repeat(auto-fit,minmax(10vh,auto));
+        grid gap: 2px;
+        height: 100vh;
+        width: 30vw;
+
+        @media (max-width:768px){
+          grid-template-columns:minmax(150px,1vh);
+          height:200vh;
+
       }
 
       .cart-button {
@@ -116,13 +166,7 @@ const clearCart = () => {
         scale: 1.1;
       }
       
-      .cart-button ~ input:checked ~ .cart {
-        height: 100%;
-        display: grid;
-      }
-
-
-      
+     
       `}
 
       </style>
