@@ -19,7 +19,7 @@ export const Person = () => {
             <div className="review-info">
               <h3 className="titulo-review">Excelente servicio</h3>
               
-                <img src="https://i.pinimg.com/564x/37/3b/8c/373b8c3fff1721eca5b8276a53c71b67.jpg"/>
+                <Image src="https://i.pinimg.com/564x/37/3b/8c/373b8c3fff1721eca5b8276a53c71b67.jpg"/>
               
               <p className="descripcion-review">
                 Superó mis expectativas, los productos son frescos,
@@ -42,7 +42,7 @@ export const Person = () => {
             <div className="review-info">
               <h3 className="titulo-review">Excelente servicio</h3>
               <div className="stars">
-                <img src="https://i.pinimg.com/564x/37/3b/8c/373b8c3fff1721eca5b8276a53c71b67.jpg"/>
+                <Image src="https://i.pinimg.com/564x/37/3b/8c/373b8c3fff1721eca5b8276a53c71b67.jpg"/>
               </div>
               <p className="descripcion-review">
                 Increible e Impecable la atención este supermecado.
@@ -65,7 +65,7 @@ export const Person = () => {
             <div className="review-info">
               <h3 className="titulo-review">Excelente servicio</h3>
               <div className="stars">
-                <img src="https://i.pinimg.com/564x/37/3b/8c/373b8c3fff1721eca5b8276a53c71b67.jpg"/>
+                <Image src="https://i.pinimg.com/564x/37/3b/8c/373b8c3fff1721eca5b8276a53c71b67.jpg"/>
               </div>
               <p className="descripcion-review">
               Me encantó comprar aquí, variedad de productos, a buen precio, envio rápido, 
@@ -87,7 +87,7 @@ export const Person = () => {
             <div className="review-info">
               <h3 className="titulo-review">Excelente servicio</h3>
               <div className="stars">
-                <img src="https://i.pinimg.com/564x/37/3b/8c/373b8c3fff1721eca5b8276a53c71b67.jpg"/>
+                <Image src="https://i.pinimg.com/564x/37/3b/8c/373b8c3fff1721eca5b8276a53c71b67.jpg"/>
               </div>
               <p className="descripcion-review">
               Realmente 100% recomendado. Los productos son frescos y
@@ -109,4 +109,10 @@ margin-top: 25px;
 color: black;
 font-size: 14px;
 font-family: "Outfit",sans-serif;
+`
+const Image = styled.img`
+width: 95px;
+height: 30px;
+object-fit: cover;
+  
 `

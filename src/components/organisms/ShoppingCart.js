@@ -122,7 +122,9 @@ const clearCart = () => {
       <style jsx>{`
       .cart {
         display:grid;
-        position: absolute;
+        position: fixed;
+        overflow-y:scroll;
+        overflow-x:hidden;
         right:0px;
         top: 0px;
 

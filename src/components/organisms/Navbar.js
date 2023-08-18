@@ -5,7 +5,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Bubblegum_Sans } from 'next/font/google';
 
-function BasicExample() {
+function BarraNavegacion() {
   return (
     <Navbar expand="lg" className="bg-light">
       <Container>
@@ -20,21 +20,17 @@ function BasicExample() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mx-auto">
-            <Nav.Link href="#home">Productos</Nav.Link>
+            <Nav.Link href="#productos">Productos</Nav.Link>
+            <Nav.Link href="#about">About Us</Nav.Link>
+            <Nav.Link href="#comentarios">Comentarios</Nav.Link>
             
             <NavDropdown title="Mas" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Comentarios</NavDropdown.Item>
-              
-              <NavDropdown.Item href="#action/3.2">About Us</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.3">
-               Redes Sociales
-              </NavDropdown.Item>
+              <NavDropdown.Item href="#contacto">Contáctanos</NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
         
-        <Nav.Link href="#link">
+        <Nav.Link href="#productos">
           <img
             className="carrito"
             src='./images/logo-tienda32pxblack.png'
@@ -47,5 +43,5 @@ function BasicExample() {
   );
 }
 
-export default BasicExample;
+export default BarraNavegacion;
  
