@@ -1,13 +1,23 @@
+
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import 'bootstrap/dist/css/bootstrap.min.css'
-import { Bubblegum_Sans } from 'next/font/google';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { shoppingInitialState } from '@/reducer/shoppingReducer';
 
-function BarraNavegacion() {
+const {cart} = shoppingInitialState;
+
+
+function BarraNavegacion({mostrarCarrito, setMostrarCarrito}) {
+  
+const handleCheckboxChange = () => {
+  setMostrarCarrito(!mostrarCarrito);
+};
+
+
   return (
-    <Navbar expand="lg" className="bg-light">
+    <Navbar expand="lg" className="bg-light fixed-top">
       <Container>
         <Navbar.Brand href="#home">
           <img
@@ -30,18 +40,20 @@ function BarraNavegacion() {
           </Nav>
         </Navbar.Collapse>
         
-        <Nav.Link href="#productos">
-          <img
-            className="carrito"
-            src='./images/logo-tienda32pxblack.png'
-            width="32px"
-            alt="cart"
-          />
-        </Nav.Link>
+        <label >
+          <input type="checkbox" onChange={handleCheckboxChange} hidden/>
+            <img
+                className="carrito"
+                src='./images/logo-tienda32pxblack.png'
+                width="32px"
+                alt="cart"
+              />
+        </label>
       </Container>
     </Navbar>
   );
 }
 
 export default BarraNavegacion;
+
  

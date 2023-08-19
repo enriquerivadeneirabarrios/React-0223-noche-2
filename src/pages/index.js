@@ -10,10 +10,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from '@/components/organisms/Footer'
 import ShoppingCart from '@/components/organisms/ShoppingCart'
 import About from '@/components/organisms/About'
+import { useState } from 'react'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+
+  const [mostrarCarrito, setMostrarCarrito,] = useState(false);
+
   return (
     <>
      <Head>
@@ -27,7 +31,7 @@ export default function Home() {
         <link rel="preconnect" href="https://fonts.googleapis.com"></link>
       </Head>
       <header>
-        <Navbar />
+        <Navbar mostrarCarrito={mostrarCarrito} setMostrarCarrito={setMostrarCarrito}/>
      </header>
       <main >
 
@@ -39,7 +43,7 @@ export default function Home() {
 
       <section id="productos">
         <Products/>
-        <ShoppingCart />
+        <ShoppingCart mostrarCarrito={mostrarCarrito} setMostrarCarrito={setMostrarCarrito}/>
               
       </section>
 

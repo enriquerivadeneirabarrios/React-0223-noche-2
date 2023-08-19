@@ -1,4 +1,4 @@
-import React, { useEffect, useReducer, useId, useState } from 'react'
+import React, {  useReducer, useState } from 'react'
 
 import { TYPES } from '../../actions/ShoppingActions.js'
 import CartItems from '../molecules/CartItems'
@@ -8,24 +8,9 @@ import Button from '../atoms/Button'
 import Card from '../atoms/Card'
 import styled from 'styled-components'
 import { Modal ,ModalHeader, ModalBody, ModalFooter } from 'reactstrap'
-import ButtonRed from '../atoms/ButtonRed.js'
 
 
-
-function CartIcon () {
-  return (
-    <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' strokeWidth='1' stroke='currentColor' fill='none' strokeLinecap='round' strokeLinejoin='round'>
-      <path stroke='none' d='M0 0h24v24H0z' fill='none' />
-      <path d='M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0' />
-      <path d='M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0' />
-      <path d='M17 17h-11v-14h-2' />
-      <path d='M6 5l14 1l-1 7h-13' />
-    </svg>
-  )
-}
-
-
-const ShoppingCart = () => {
+const ShoppingCart = ({mostrarCarrito, setMostrarCarrito}) => {
     const [state,dispatch] = useReducer (shoppingReducer, shoppingInitialState);
 
     const addToCart = (id) => {
@@ -42,41 +27,24 @@ const ShoppingCart = () => {
     
 };
 
-
 const clearCart = () => {
   dispatch({type: TYPES.CLEAR_CART});
 };
 
     const {products, cart,cartPrice} = state;
 
-    const [mostrarCarrito, setMostrarCarrito,] = useState(false);
     const [modal, setModal] = useState(false);
 
-      const handleCheckboxChange = () => {
-        setMostrarCarrito(!mostrarCarrito);
-      };
-
-      //const toggle = () => setModal(!modal);
-      const handleConfirmarPago = () => {
-      const confirmacion = window.confirm('¿Estás seguro de confirmar el pago?');
-      if (confirmacion) {
-        // Aquí puedes realizar la acción de confirmación de pago
-        // Por ejemplo, enviar una solicitud al servidor, actualizar el estado, etc.
-      }
+    const toggle = () => {
+      setModal(!modal);
+      setMostrarCarrito(!mostrarCarrito);
     };
 
 
+/////////////////////////////////////////////////////////////////////////////
     return (
     <>
-
-      <label className='cart-button'>
-        <CartIcon />
-        <input type="checkbox" onChange={handleCheckboxChange} hidden/>
-        Mostrar carrito
-      </label>
-
-
-         <aside className="cart"  style={{ display: mostrarCarrito ? 'block' : 'none' }}>
+         <aside className="cart"  style={{ display: mostrarCarrito? 'block' : 'none' }}>
         <Title>Carrito De Compras</Title>
        
 
@@ -93,8 +61,7 @@ const clearCart = () => {
 
           <Sub>
             <SubText><b>Subtotal</b><br />$ {cartPrice}</SubText>
-            <Button OnClick={handleConfirmarPago} Content = "Ir a pagar" />
-            {/*<Button OnClick={toggle}  Content = "Ir a pagar" />
+            <Button OnClick={toggle}  Content = "Ir a pagar" />
 
             <Modal isOpen={modal} toggle={toggle} fullscreen='md' size='=' centered={true} scrollable={true} >
                 <ModalHeader toggle={toggle}>Confirmación de pago</ModalHeader>
@@ -102,12 +69,12 @@ const clearCart = () => {
                  ¿Está seguro de realizar la compra?
                 </ModalBody>
                 <ModalFooter>
-                  <Button  OnClick={toggle} Content='Do Something' /> {' '}
+                  <Button  OnClick={toggle} Content='Pagar' /> {' '}
                     
-                  <ButtonRed OnClick={toggle} Content='Cancel' />
+                  <Button OnClick={toggle} Content='Volver al carrito' />
 
                 </ModalFooter>
-            </Modal>*/}
+            </Modal>
           </Sub>
         </aside>
 
@@ -126,24 +93,27 @@ const clearCart = () => {
         overflow-y:scroll;
         overflow-x:hidden;
         right:0px;
-        top: 0px;
+        top: 100px;
+        z-index: 9999;
 
 
         padding-left: 5vw;
         padding-top: 10px;
         padding-bottom: 50px;
-        background-color: white;
+        background-color: #f8f9fa;
 
 
         grid-template-columns: repeat(auto-fit,minmax(150px,1vh));
         grid-template-rows:repeat(auto-fit,minmax(10vh,auto));
         grid gap: 2px;
-        height: 100vh;
+        height: 70vh;
         width: 30vw;
 
-        @media (max-width:768px){
+        @media (max-width:900px){
           grid-template-columns:minmax(150px,1vh);
-          height:200vh;
+          
+          overflow-y:scroll;
+          overflow-x:hidden;
 
       }
 
@@ -194,10 +164,6 @@ flex-basis: 20 rem;
 font-family: 'Outfit', sans-serif;
 justify-content:center;
 justify-content:space-around;
-   
-    
-
-
 
 `
 
@@ -226,8 +192,11 @@ grid-column:1/4;
 width: 25vw;
 
 border-radius: 5px;
-background-color: white;
+background-color: #f8f9fa;
 border: 1px solid transparent;
+
+color: black;
+z-index: 9999;
 
 
 `
@@ -243,8 +212,11 @@ grid-template-columns: repeat(3,1fr);
 
 justify-self:start;
 
+
 `
 const SubText = styled.p`
 margin-left:20px;
 font-size: 1.5rem;
+color: black;
+z-index: 9999;
 `
