@@ -27,5 +27,11 @@ color: #36783d;
 font-family: 'Outfit', sans-serif;
 font-weight: bold;
 
+@media(max-width:768px){
+  height: auto;
+ 
+}
+
+
 
 `
