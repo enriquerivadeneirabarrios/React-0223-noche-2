@@ -18,9 +18,7 @@ const AboutUs = () => {
                   Muy amables por habernos escogido a nosotros, gracias a ti seguimos creciendo. </p>
 
               </Paragraph>
-              <Button className={styles.button}> Leer más
-              
-              </Button>
+              <Button className={styles.button}><a target="_blank" href= "https://campus.academianumen.com/">Leer más</a></Button>
 
             </Box>
             <Image>
@@ -94,6 +92,7 @@ margin-top:30px;
 border-radius: 5px;
 font-weight: bold;
 font-family: 'Outfit', sans-serif;
+
 
 
 
