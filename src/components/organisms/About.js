@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import styles from '@/styles/Home.module.css'
+import Link from 'next/link';
 
 const AboutUs = () => {
   return (
@@ -18,7 +19,7 @@ const AboutUs = () => {
                   Muy amables por habernos escogido a nosotros, gracias a ti seguimos creciendo. </p>
 
               </Paragraph>
-              <Button className={styles.button}><a target="_blank" href= "https://campus.academianumen.com/">Leer más</a></Button>
+              <Button className={styles.button}><Link target="_blank" href= "https://campus.academianumen.com/">Leer más</Link></Button>
 
             </Box>
             <Image>
