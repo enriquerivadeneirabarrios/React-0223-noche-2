@@ -8,7 +8,7 @@ const AboutUs = () => {
     <>
       <About>
         <Container>
-          <Box>
+          <Boxone>
               <Title>
                 <h1>About Us</h1>
               </Title>
@@ -21,10 +21,10 @@ const AboutUs = () => {
               </Paragraph>
               <Button className={styles.button}><Link target="_blank" href= "https://campus.academianumen.com/">Leer más</Link></Button>
 
-            </Box>
-            <Image>
-            <img className="image" src="./images/aboutus.jpg" height="340px" width= "450px"  alt="about us"/>
-            </Image>
+            </Boxone>
+            <Boxtwo>
+            <Image className="image" src="./images/aboutus.jpg" alt="about us"/>
+            </Boxtwo>
           
         </Container>
       </About>
@@ -41,32 +41,25 @@ min-height: 100vh;
 background-color: white;
 margin-bottom:50px;
 
+
+`
+
+const Container = styled.div`
+width: 80%;
+display: flex;
+margin:auto;
+
 display: grid;
 grid-template-columns: repeat(
 auto-fit,
 minmax(150px,1fr))
 
 `
-
-const Container = styled.div`
-width: 80%;
-display: block;
-margin:auto;
-
+const Boxone = styled.div`
+margin-top: 50px;
+width: 90%;
 
 `
-const Box = styled.div`
-float:left;
-width: 55%;
-
-`
-const Image = styled.picture`
-float:right;
-width: 40%;
-
-
-`
-
 const Title = styled.div`
 text-trasform: uppercase;
 font-size: 28px;
@@ -75,17 +68,16 @@ color: black;
 
 `
 const Paragraph = styled.div`
-margin-top: 10px;
+width: 100%;
 font-family:; 
 font-size: 18px;
 line-height: 1.5;
 `
 
-
 const Button = styled.button`
 background-color: rgb(247, 148, 0);
 border: 1px solid transparent;
-padding: 10px 50px;
+padding: 10px 30px;
 color: rgb(195, 77, 25);
 font-size: 1rem;
 letter-spaxing: 1.5px;
@@ -94,7 +86,21 @@ border-radius: 5px;
 font-weight: bold;
 font-family: 'Outfit', sans-serif;
 
-
+`
+const Boxtwo = styled.div`
+margin-top: 50px;
+width: 90%;
 
 
 `
+
+const Image = styled.img`
+width: 100%;
+
+
+`
+
+
+
+
+
