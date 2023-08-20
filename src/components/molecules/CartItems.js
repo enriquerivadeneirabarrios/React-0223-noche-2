@@ -31,8 +31,9 @@ grid-gap: 10px;
 
 
 border-radius: 5px;
-background-color: white;
+background-color: #f8f9fa;
 border: 1px solid transparent;
+color: black;
 
 margin-top:;
 margin-left:10px;
@@ -57,6 +58,7 @@ const Name = styled.p`
 
 align-self:center;
 padding-bottom: 25px;
+color: black;
 
 `
 
