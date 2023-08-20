@@ -235,6 +235,8 @@ border: 1px solid transparent;
 const Title = styled.h2`
 grid-column:1/4;
 grid-row:1;
+font-weight: bold;
+font-family: 'Outfit', sans-serif;
 `
 
 const Sub = styled.div`
