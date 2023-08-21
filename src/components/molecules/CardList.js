@@ -7,6 +7,7 @@ const Db = []
 const CardsList = () => {
   return (
     <section>
+      <h2>Ofertas de la Semana</h2>
       {
         Db.map(card => <Card
           key={card.id}
@@ -26,9 +27,11 @@ const CardsList = () => {
       flex-wrap:wrap;
       flex-grow:1;
       flex-basis: 20 rem;
-
+      
+  
       }
 
+    
      
     `}
 
