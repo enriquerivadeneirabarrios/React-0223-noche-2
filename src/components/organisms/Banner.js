@@ -4,10 +4,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Carousel from 'react-bootstrap/Carousel';
 
 
-
 const Banner = () => {
   return (
-    <>
+    
+    <Section>
         <Carousel className="sliders">
             <Carousel.Item className="sliders-item">
                 <img
@@ -39,13 +39,16 @@ const Banner = () => {
             </Carousel.Item>
         </Carousel>
  
-    </>
+    </Section>
  )
     
 }
 
 export default Banner
 
+const Section = styled.div`
+margin-top: 95px;
 
+`
 
 

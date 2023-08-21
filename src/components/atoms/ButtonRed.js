@@ -5,6 +5,7 @@ const ButtonRed = (props) => {
   return (
     <>
     <button onClick = {props.OnClick}>{props.Content}</button>
+    
     <style jsx>{`
     button {
         color: rgb(3, 84, 77);
