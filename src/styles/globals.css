@@ -188,18 +188,41 @@ a {
 
 .sliders {
   width: 100%;
-  height: 85vh;
-  
+  height: 85vh;  
 }
 
 .sliders-item {
   width: 100%;
   height: 85vh;
 }
+
 .sliders-img {
   width: 100%;
   height: 85vh;
+  object-fit: cover;
+}
 
+.sliders-caption {
+  margin-bottom: 20px;
+}
+
+.sliders-caption h3 {
+  font-size: 3rem;  
+  color: rgb(255, 255, 255);
+}
+
+.sliders-caption span {
+  font-size: 3rem;
+  color: #8BE88F;
+}
+
+.sliders-caption b {
+  color: #F19F87;
+}
+
+.sliders-caption p {
+  font-size: 2.2rem;  
+  color: rgb(233, 231, 231);
 }
 
 

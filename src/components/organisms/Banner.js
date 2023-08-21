@@ -9,36 +9,46 @@ const Banner = () => {
     
     <Section>
         <Carousel className="sliders">
+
             <Carousel.Item className="sliders-item">
-                <img
-                    className="sliders-img"
-                    src= "./images-carousel/carousel1.jpg"
-                    alt="First slide"
-                />
+                
+                    <img
+                        className="sliders-img"
+                        src= "./images-carousel/fruits7.jpeg"
+                        alt="First slide"
+                    />
+                    <Carousel.Caption className="sliders-caption">
+                     <i><h3>Bienvenidos a <span>Freshness</span></h3></i>
+                     <i><p>El mejor lugar para realizar tus compras</p> </i>      
+                    </Carousel.Caption>
+                
             </Carousel.Item>
+
             <Carousel.Item className="sliders-item">
                 <img
                     className="sliders-img"
-                    src= "./images-carousel/carousel2.jpg"
+                    src= "./images-carousel/fruits8.jpg"
                     alt="Second slide"
                 />
+                <Carousel.Caption className="sliders-caption">
+                     <i><h3>Servicio de <b>Calidad</b></h3></i>
+                     <i><p>Para toda la región</p> </i>      
+                </Carousel.Caption>
             </Carousel.Item>
+
             <Carousel.Item className="sliders-item"> 
                 <img
                     className="sliders-img"
-                    src= "./images-carousel/carousel3.jpg"
+                    src= "./images-carousel/fruits10.jpg"
                     alt="Third slide"
                 />
-            </Carousel.Item>
-            <Carousel.Item className="sliders-item">
-                <img
-                    className="sliders-img"
-                    src= "./images-carousel/carousel4.jpg"
-                    alt="Fourth slide"
-                />
-            </Carousel.Item>
+                <Carousel.Caption className="sliders-caption">
+                     <i><h3>Nuestra nueva tienda <span>100% Online</span> </h3></i>
+                     <i><p>Para comprar desde casa</p> </i>      
+                    </Carousel.Caption>
+                </Carousel.Item>
+
         </Carousel>
- 
     </Section>
  )
     
@@ -46,9 +56,5 @@ const Banner = () => {
 
 export default Banner
 
-const Section = styled.div`
-margin-top: 95px;
-
-`
 
 
