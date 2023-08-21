@@ -37,9 +37,9 @@ export default AboutUs
 
 const About = styled.div`
 width: 100%;
-min-height: 100vh;
+min-height: auto;
 background-color: white;
-margin-bottom:50px;
+padding-bottom:30px;
 
 
 `
@@ -58,6 +58,7 @@ minmax(150px,1fr))
 const Boxone = styled.div`
 margin-top: 50px;
 width: 90%;
+
 
 `
 const Title = styled.div`
@@ -90,7 +91,6 @@ font-family: 'Outfit', sans-serif;
 const Boxtwo = styled.div`
 margin-top: 50px;
 width: 90%;
-
 
 `
 
