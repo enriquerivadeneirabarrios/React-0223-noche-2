@@ -56,5 +56,9 @@ const Banner = () => {
 
 export default Banner
 
+const Section = styled.div`
+margin-top: 90px;
+
+`
 
 

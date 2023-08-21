@@ -17,7 +17,7 @@ const handleCheckboxChange = () => {
 
 
   return (
-    <Navbar expand="lg" className="bg-light fixed-top">
+    <Navbar expand="lg" className="navbar-dark bg-dark fixed-top">
       <Container>
         <Navbar.Brand href="#home">
           <img
@@ -44,7 +44,7 @@ const handleCheckboxChange = () => {
           <input type="checkbox" onChange={handleCheckboxChange} hidden/>
             <img
                 className="carrito"
-                src='./images/logo-tienda32pxblack.png'
+                src='./images/logo-tienda32pxwhite.png'
                 width="32px"
                 alt="cart"
               />

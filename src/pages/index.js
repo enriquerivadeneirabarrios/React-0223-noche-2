@@ -11,7 +11,7 @@ import Footer from '@/components/organisms/Footer'
 import ShoppingCart from '@/components/organisms/ShoppingCart'
 import About from '@/components/organisms/About'
 import { useState } from 'react'
-
+import Counter from '@/components/atoms/Counter'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
@@ -40,7 +40,9 @@ export default function Home() {
       <section>      
         <Banner/>
       </section>
-
+      <section>      
+        <Counter/>
+      </section>
       <section id="productos">
         <Products/>
         <ShoppingCart mostrarCarrito={mostrarCarrito} setMostrarCarrito={setMostrarCarrito}/>

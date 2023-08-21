@@ -34,5 +34,5 @@ padding-bottom: 50px;
 
 
 const Title = styled.h2`
-margin-top: 20px;
+margin-top: 10px;
 `
