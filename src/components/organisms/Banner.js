@@ -14,7 +14,7 @@ const Banner = () => {
                 
                     <img
                         className="sliders-img"
-                        src= "./images-carousel/fruits7.jpeg"
+                        src= "./images-carousel/fruits1.jpeg"
                         alt="First slide"
                     />
                     <Carousel.Caption className="sliders-caption">
@@ -27,7 +27,7 @@ const Banner = () => {
             <Carousel.Item className="sliders-item">
                 <img
                     className="sliders-img"
-                    src= "./images-carousel/fruits8.jpg"
+                    src= "./images-carousel/fruits2.jpg"
                     alt="Second slide"
                 />
                 <Carousel.Caption className="sliders-caption">
@@ -39,11 +39,11 @@ const Banner = () => {
             <Carousel.Item className="sliders-item"> 
                 <img
                     className="sliders-img"
-                    src= "./images-carousel/fruits10.jpg"
+                    src= "./images-carousel/employee.jpg"
                     alt="Third slide"
                 />
                 <Carousel.Caption className="sliders-caption">
-                     <i><h3>Nuestra nueva tienda <span>100% Online</span> </h3></i>
+                     <i><h3>Nueva tienda <span>100% Online</span> </h3></i>
                      <i><p>Para comprar desde casa</p> </i>      
                     </Carousel.Caption>
                 </Carousel.Item>
