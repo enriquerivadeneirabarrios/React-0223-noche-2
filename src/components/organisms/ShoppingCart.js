@@ -10,7 +10,7 @@ import styled from 'styled-components'
 import { Modal ,ModalHeader, ModalBody, ModalFooter } from 'reactstrap'
 
 
-const ShoppingCart = ({mostrarCarrito, setMostrarCarrito}) => {
+const ShoppingCart = ({mostrarCarrito, setMostrarCarrito, contadorCarrito, setContadorCarrito}) => {
     const [state,dispatch] = useReducer (shoppingReducer, shoppingInitialState);
 
     const addToCart = (id) => {
@@ -31,7 +31,7 @@ const clearCart = () => {
   dispatch({type: TYPES.CLEAR_CART});
 };
 
-    const {products, cart,cartPrice} = state;
+    const {products, cart,cartPrice, cartCount} = state;
 
     const [modal, setModal] = useState(false);
 
@@ -40,12 +40,14 @@ const clearCart = () => {
       setMostrarCarrito(!mostrarCarrito);
     };
 
+setContadorCarrito(cartCount)
+
 
 /////////////////////////////////////////////////////////////////////////////
     return (
     <>
-         <aside className="cart"  style={{ display: mostrarCarrito? 'block' : 'none' }}>
-        <Title>Carrito De Compras</Title>
+         <aside className="cart "  style={{ display: mostrarCarrito? 'block' : 'none' }}>
+        <Title>Carrito De Compras </Title>
        
 
           <CartCards>
@@ -77,6 +79,7 @@ const clearCart = () => {
             </Modal>
           </Sub>
         </aside>
+
 
      
       

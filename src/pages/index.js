@@ -10,13 +10,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from '@/components/organisms/Footer'
 import ShoppingCart from '@/components/organisms/ShoppingCart'
 import About from '@/components/organisms/About'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
 
   const [mostrarCarrito, setMostrarCarrito,] = useState(false);
+  const [contadorCarrito, setContadorCarrito] = useState(0);
 
   return (
     <>
@@ -31,7 +32,11 @@ export default function Home() {
         <link rel="preconnect" href="https://fonts.googleapis.com"></link>
       </Head>
       <header>
-        <Navbar mostrarCarrito={mostrarCarrito} setMostrarCarrito={setMostrarCarrito}/>
+        <Navbar 
+          mostrarCarrito={mostrarCarrito} 
+          setMostrarCarrito={setMostrarCarrito} 
+          contadorCarrito={contadorCarrito}
+        />
      </header>
       <main >
 
@@ -43,7 +48,12 @@ export default function Home() {
 
       <section id="productos">
         <Products/>
-        <ShoppingCart mostrarCarrito={mostrarCarrito} setMostrarCarrito={setMostrarCarrito}/>
+        <ShoppingCart 
+          mostrarCarrito={mostrarCarrito} 
+          setMostrarCarrito={setMostrarCarrito} 
+          contadorCarrito={contadorCarrito} 
+          setContadorCarrito={setContadorCarrito}
+        />
               
       </section>
 
