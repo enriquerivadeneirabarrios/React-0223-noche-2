@@ -188,7 +188,7 @@ a {
 
 .sliders {
   width: 100%;
-  height: 90vh;  
+  height: 85vh;  
 }
 
 .sliders-item {
@@ -198,7 +198,7 @@ a {
 
 .sliders-img {
   width: 100%;
-  height: 90vh;
+  height: 85vh;
   object-fit: cover;
 }
 
