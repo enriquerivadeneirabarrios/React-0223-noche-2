@@ -23,7 +23,7 @@ const CardsList = () => {
 export default CardsList
 
 const List = styled.section`
-font-family: 'Lexend Exa', sans-serif;
+
 font-size: 28px;
            
 justify-content:center;

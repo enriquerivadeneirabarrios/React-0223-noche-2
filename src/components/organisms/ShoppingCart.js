@@ -98,7 +98,7 @@ setContadorCarrito(cartCount)
         right:0px;
         top: 100px;
         z-index: 9999;
-
+        font-family: 'Outfit', sans-serif;
 
         padding-left: 5vw;
         padding-top: 10px;
