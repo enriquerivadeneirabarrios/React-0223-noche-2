@@ -17,10 +17,12 @@ const CardsList = () => {
           data={card}
         />)
       }
-
+    </section>
     </List>
   )
 }
+
+
 
 export default CardsList
 
