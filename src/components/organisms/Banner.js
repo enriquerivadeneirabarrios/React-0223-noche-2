@@ -19,7 +19,7 @@ const Banner = () => {
                     />
                     <Carousel.Caption className="sliders-caption">
                      <i><h3>Bienvenidos a <span>Freshness</span></h3></i>
-                     <i><p>El mejor lugar para realizar tus compras</p> </i>      
+                     <i><p>El mejor lugar para realizar tus compras</p></i>      
                     </Carousel.Caption>
                 
             </Carousel.Item>

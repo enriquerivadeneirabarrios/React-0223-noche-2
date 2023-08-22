@@ -10,7 +10,7 @@ const AboutUs = () => {
         <Container>
           <Boxone>
               <Title>
-                <h1>About Us</h1>
+                <i><h1>About Us</h1></i>
               </Title>
               <Paragraph> 
                 <p>Desde el año 1982 brindándote el mejor servicio y por ustedes estamos en todo América. 

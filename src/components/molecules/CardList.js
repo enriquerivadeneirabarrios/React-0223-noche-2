@@ -7,7 +7,7 @@ const Db = []
 const CardsList = () => {
   return (
     <section>
-      <h2>Ofertas de la Semana</h2>
+      <i><h2>Ofertas de la Semana</h2></i>  
       {
         Db.map(card => <Card
           key={card.id}
