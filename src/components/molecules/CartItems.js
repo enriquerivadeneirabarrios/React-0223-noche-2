@@ -30,12 +30,12 @@ grid-gap: 10px;
 
 
 
+
 border-radius: 5px;
 background-color: #f8f9fa;
 border: 1px solid transparent;
 color: black;
 
-margin-top:;
 margin-left:10px;
 
 @media(max-width:768px){

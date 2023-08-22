@@ -1,13 +1,16 @@
 
 import React from 'react'
 import Card from '../atoms/Card'
+import styled from 'styled-components'
 
 const Db = []
 
 const CardsList = () => {
   return (
-    <section>
+    <List>
       <h2>Ofertas de la Semana</h2>
+    <section>
+      <i><h2>Ofertas de la Semana</h2></i>  
       {
         Db.map(card => <Card
           key={card.id}
@@ -15,29 +18,23 @@ const CardsList = () => {
         />)
       }
 
-      <style jsx> {`
-    section {
-      font-family: 'Outfit', sans-serif;
-      display: flex;
-      justify-content:center;
-      justify-content:space-around;
-      padding-left: 50px;
-      padding-bottom: 50px;
-      background-color: white;
-      flex-wrap:wrap;
-      flex-grow:1;
-      flex-basis: 20 rem;
-      
-  
-      }
-
-    
-     
-    `}
-
-      </style>
-    </section>
+    </List>
   )
 }
 
 export default CardsList
+
+const List = styled.section`
+
+font-size: 28px;
+           
+justify-content:center;
+justify-content:space-around;
+padding-top: 40px;
+background-color: white;
+
+display: flex;
+flex-wrap:wrap;
+flex-grow:1;
+flex-basis: 20 rem;
+`
