@@ -40,6 +40,10 @@ const clearCart = () => {
       setMostrarCarrito(!mostrarCarrito);
     };
 
+    const handleCheckboxChange = () => {
+      setMostrarCarrito(!mostrarCarrito);
+    };
+
 setContadorCarrito(cartCount)
 
 
@@ -77,6 +81,8 @@ setContadorCarrito(cartCount)
 
                 </ModalFooter>
             </Modal>
+            <Button OnClick={handleCheckboxChange} Content="Seguir comprando" />
+            
           </Sub>
         </aside>
 
