@@ -8,8 +8,7 @@ const Db = []
 const CardsList = () => {
   return (
     <List>
-      <h2>Ofertas de la Semana</h2>
-    <section>
+
       <i><h2>Ofertas de la Semana</h2></i>  
       {
         Db.map(card => <Card
