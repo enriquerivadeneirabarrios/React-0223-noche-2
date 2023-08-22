@@ -4,19 +4,26 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { shoppingInitialState } from '@/reducer/shoppingReducer';
-
-const {cart} = shoppingInitialState;
+import { useState, useEffect } from 'react';
 
 
-function BarraNavegacion({mostrarCarrito, setMostrarCarrito}) {
-  
+
+
+function BarraNavegacion({mostrarCarrito, setMostrarCarrito, contadorCarrito}) {
+
+const [contadorVisible, setContadorVisible] = useState(false);
+
+useEffect(() => {
+  setContadorVisible(contadorCarrito > 0);
+}, [contadorCarrito]);
+
 const handleCheckboxChange = () => {
   setMostrarCarrito(!mostrarCarrito);
 };
 
 
   return (
+    <>
     <Navbar expand="lg" className="navbar-dark bg-dark fixed-top">
       <Container>
         <Navbar.Brand href="#home">
@@ -40,17 +47,33 @@ const handleCheckboxChange = () => {
           </Nav>
         </Navbar.Collapse>
         
-        <label >
+        <label className='carrito' >
           <input type="checkbox" onChange={handleCheckboxChange} hidden/>
+
             <img
-                className="carrito"
                 src='./images/logo-tienda32pxwhite.png'
                 width="32px"
-                alt="cart"
-              />
+                alt="cart" 
+            />
+            {contadorVisible && <p className= "contador">+{contadorCarrito}</p>}
+            
         </label>
       </Container>
     </Navbar>
+
+    <style jsx>{`
+    .carrito {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .contador {
+      color: white;
+      margin-left: 10px;
+
+    }
+    `}</style>
+    </>
   );
 }
 
