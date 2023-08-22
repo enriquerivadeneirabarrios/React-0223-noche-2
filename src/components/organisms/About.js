@@ -10,7 +10,7 @@ const AboutUs = () => {
         <Container>
           <Boxone>
               <Title>
-                <h1>About Us</h1>
+                <h2>About Us</h2>
               </Title>
               <Paragraph> 
                 <p>Desde el año 1982 brindándote el mejor servicio y por ustedes estamos en todo América. 
@@ -66,6 +66,7 @@ text-trasform: uppercase;
 font-size: 28px;
 margin-top: 20px;
 color: black;
+font-family: 'Lexend Exa', sans-serif;
 
 `
 const Paragraph = styled.div`
@@ -73,6 +74,7 @@ width: 100%;
 font-family:; 
 font-size: 18px;
 line-height: 1.5;
+font-family: 'Outfit', sans-serif;
 `
 
 const Button = styled.button`

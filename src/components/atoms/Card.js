@@ -29,7 +29,7 @@ export default Card
 
 const Cards = styled.figure`
 width: 220px;
-height: 380px;
+height: 330px;
 border-radius: 5px;
 background-color: white;
 border: 1px solid transparent;
@@ -45,7 +45,7 @@ object-fit:cover;
 `
 
 const Producto = styled.h3`
-line-height: 5;
+line-height: 3;
 margin-left: 2rem;
 font-size: 1.1rem;
 font-weight: 600;

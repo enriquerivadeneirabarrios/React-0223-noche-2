@@ -201,7 +201,7 @@ z-index: 9999;
 
 `
 
-const Title = styled.h2`
+const Title = styled.h4`
 grid-column:1/4;
 grid-row:1;
 font-weight: bold;
@@ -221,4 +221,5 @@ margin-left:20px;
 font-size: 1.5rem;
 color: black;
 z-index: 9999;
+font-family: 'Outfit', sans-serif;
 `
