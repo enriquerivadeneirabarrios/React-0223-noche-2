@@ -25,7 +25,6 @@ font-size: 28px;
 font-style: normal;
 text-align: center;
 color: black;
-font-family: 'Lexend Exa', sans-serif;
 font-weight: 700;
 padding-top: 50px;
 padding-bottom: 50px;

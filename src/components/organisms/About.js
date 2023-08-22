@@ -66,7 +66,7 @@ text-trasform: uppercase;
 font-size: 28px;
 margin-top: 20px;
 color: black;
-font-family: 'Lexend Exa', sans-serif;
+
 
 `
 const Paragraph = styled.div`
