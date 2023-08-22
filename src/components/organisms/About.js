@@ -67,12 +67,14 @@ font-size: 28px;
 margin-top: 20px;
 color: black;
 
+
 `
 const Paragraph = styled.div`
 width: 100%;
 font-family:; 
 font-size: 18px;
 line-height: 1.5;
+font-family: 'Outfit', sans-serif;
 `
 
 const Button = styled.button`

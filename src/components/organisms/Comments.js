@@ -21,12 +21,11 @@ export default Comments
 const Comment = styled.div`
 background-color: white;
 min-height: auto;
-font-size: 24px;
+font-size: 28px;
 font-style: normal;
 text-align: center;
-color: #36783d;
-font-family: 'Outfit', sans-serif;
-font-weight: bold;
+color: black;
+font-weight: 700;
 padding-top: 50px;
 padding-bottom: 50px;
 

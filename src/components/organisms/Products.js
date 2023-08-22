@@ -22,9 +22,9 @@ export default Products
 const Product = styled.div`
 background-color: white;
 width: 100%;
-color: rgb(54, 120, 61);
+color: black;
 font-weight: bold;
-font-size: 24px;
+
 
 
 `
