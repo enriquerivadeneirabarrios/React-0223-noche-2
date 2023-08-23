@@ -16,7 +16,7 @@ const CardsList = () => {
           data={card}
         />)
       }
-    </section>
+    
     </List>
   )
 }
