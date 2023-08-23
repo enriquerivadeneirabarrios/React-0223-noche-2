@@ -1,5 +1,4 @@
 import React, {  useReducer, useState } from 'react'
-
 import { TYPES } from '../../actions/ShoppingActions.js'
 import CartItems from '../molecules/CartItems'
 import {shoppingReducer} from '../../reducer/shoppingReducer'
