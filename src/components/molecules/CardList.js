@@ -8,17 +8,20 @@ const Db = []
 const CardsList = () => {
   return (
     <List>
-      <h2>Ofertas de la Semana</h2>
+
+      <i><h2>Ofertas de la Semana</h2></i>  
       {
         Db.map(card => <Card
           key={card.id}
           data={card}
         />)
       }
-
+    </section>
     </List>
   )
 }
+
+
 
 export default CardsList
 

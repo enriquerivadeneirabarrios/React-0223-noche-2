@@ -6,7 +6,7 @@ const Comments = () => {
   return (
     <Comment>
       <div>
-        <Title className="section-title">¿Qué dicen nuestros clientes?</Title>
+        <i><Title className="section-title">¿Qué dicen nuestros clientes?</Title></i>  
       </div>
       <Person>
       
