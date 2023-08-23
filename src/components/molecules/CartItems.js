@@ -28,9 +28,6 @@ grid-template-columns: repeat(auto-fit,minmax(5vw,10vw));
 grid-template-rows: 40px, 30px 30px;
 grid-gap: 10px;
 
-
-
-
 border-radius: 5px;
 background-color: #f8f9fa;
 border: 1px solid transparent;
@@ -38,8 +35,10 @@ color: black;
 
 margin-left:10px;
 
-@media(max-width:768px){
-    grid-template-columns:minmax(5vw,10vw);
+@media(max-width:600px){
+    display:flex;
+    flex-direction:column;
+    align-items:center;
 }
 
 `
@@ -60,10 +59,4 @@ align-self:center;
 padding-bottom: 25px;
 color: black;
 
-`
-
-const Price = styled.p`
-grid-column:2;
-grid-row
-line-height:50%
 `

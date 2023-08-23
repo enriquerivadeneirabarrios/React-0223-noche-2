@@ -188,17 +188,17 @@ a {
 
 .sliders {
   width: 100%;
-  height: 91vh;  
+  height: 88vh;  
 }
 
 .sliders-item {
   width: 100%;
-  height: 91vh;
+  height: 88vh;
 }
 
 .sliders-img {
   width: 100%;
-  height: 100%;
+  height: 88vh;
   object-fit: cover;
 }
 
