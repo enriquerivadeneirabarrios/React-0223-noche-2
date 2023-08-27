@@ -1,8 +1,8 @@
 import React, {  useReducer, useState } from 'react'
 import { TYPES } from '../../actions/ShoppingActions.js'
 import CartItems from '../molecules/CartItems'
-import {shoppingReducer} from '../../reducer/shoppingReducer'
-import {shoppingInitialState} from '../../reducer/shoppingReducer'
+import {shoppingReducer} from '../../reducer/ShoppingReducer.js'
+import {shoppingInitialState} from '../../reducer/ShoppingReducer.js'
 import Button from '../atoms/Button'
 import Card from '../atoms/Card'
 import styled from 'styled-components'
@@ -65,7 +65,7 @@ setContadorCarrito(cartCount)
 
 
           <Sub>
-            <SubText><b>Subtotal</b><br />$ {cartPrice}</SubText>
+            <SubText><b>Total</b><br />$ {cartPrice}</SubText>
             <Button OnClick={toggle}  Content = "Ir a pagar" />
 
             <Modal isOpen={modal} toggle={toggle} fullscreen='md' size='=' centered={true} scrollable={true} >
@@ -101,7 +101,7 @@ setContadorCarrito(cartCount)
         overflow-y:scroll;
         overflow-x:hidden;
         right:0px;
-        top: 100px;
+        top: 95px;
         z-index: 9999;
         font-family: 'Outfit', sans-serif;
 
@@ -117,8 +117,9 @@ setContadorCarrito(cartCount)
         height: 70vh;
         width: 30vw;
 
-        @media (max-width:900px){
+        @media (max-width:600px){
           grid-template-columns:minmax(150px,1vh);
+          width: 80vw;
           
           overflow-y:scroll;
           overflow-x:hidden;
