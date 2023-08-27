@@ -175,25 +175,6 @@ justify-content:space-around;
 
 `
 
-const Carrito = styled.div`
-padding-left: 5vw;
-padding-top: 10px;
-padding-bottom: 50px;
-background-color: white;
-
-
-grid-template-columns: repeat(auto-fit,minmax(150px,1vh));
-grid-template-rows:repeat(auto-fit,minmax(10vh,auto));
-grid gap: 2px;
-height: 120vh;
-width: 30vw;
-
-@media (max-width:768px){
-  grid-template-columns:minmax(150px,1vh);
-  height:200vh;
-}
-
-`
 
 const CartCards = styled.figure`
 grid-column:1/4;
